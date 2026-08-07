@@ -1,12 +1,12 @@
 ---
-templateKey: post
-title:  Digital world and Marketing vs Social Media Posting - an elaborate architecture discussion
-author: Aniruddha
-date: '2019-07-28 13:49:56'
-intro_paragraph:  I was discussing with some of my friends, working in current digital world, working best for their clients. They use to do many implementation techniques which effectively grows CLIENT's business.
-tags: '#digital-marketting #SEO #idea-on-automation'
-introImage: /assets/img/digital-marketting.png
-path: "digital-world-and-marketing-vs-social-media-posting-an-elaborate-architecture-discussion"
+layout: post
+title: "Digital world and Marketing vs Social Media Posting - an elaborate architecture discussion"
+subtitle: "I was discussing with some of my friends, working in current digital world, working best for their clients. They use to do many implementation techniques which effectively grows CLIENT's business."
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [digital-marketting, SEO, idea-on-automation]
+author: Aniruddha Banerjee
 ---
 Hi Guys, I was discussing with some of my friends, working in current digital world, working best for their clients. They use to do many implementation techniques which effectively grows CLIENT's business.
 

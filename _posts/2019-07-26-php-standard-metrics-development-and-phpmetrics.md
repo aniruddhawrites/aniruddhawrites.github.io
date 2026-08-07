@@ -1,17 +1,16 @@
 ---
-templateKey: post
-title: PHP standard metrics development and PHPMetrics
-author: Aniruddha
-date: '2019-07-26 01:08:20'
-intro_paragraph: >-
-  PHPMetrics provides tons of metrics, Complexity: Cyclomatic complexity, Myer's
+layout: post
+title: "PHP standard metrics development and PHPMetrics"
+subtitle: "PHPMetrics provides tons of metrics, Complexity: Cyclomatic complexity, Myer's
   interval, Relative system complexity, Volume: Vocabulary, Data complexity,
   Lines of code, Readability..., Object Oriented: Lack of cohesion of methods,
   Coupling, Abstraction..., Maintainability: Maintainability index, Halstead's
-  metrics, Effort..., And many more ! An excerpt
-tags: '#modern-web-technology #coding-standard #code-sniff #code-complexicity'
-introImage: /assets/img/phpmetrics-supporting-development.png
-path: "php-standard-metrics-development-and-phpmetrics"
+  metrics, Effort..., And many more ! An excerpt"
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [modern-web-technology, coding-standard, code-sniff, code-complexicity]
+author: Aniruddha Banerjee
 ---
 What is PHPMetrics and how can I use it?
 

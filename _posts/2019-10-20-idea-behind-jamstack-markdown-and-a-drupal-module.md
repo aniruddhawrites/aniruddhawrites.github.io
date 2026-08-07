@@ -1,14 +1,13 @@
 ---
-templateKey: post
-title: 'Idea behind JAMstack, markdown and a Drupal module'
-author: Aniruddha
-date: '2019-10-20 14:11:04'
-intro_paragraph: >-
-  We are speaking about JAMstack nowadays. Possibly thinking day and night, how
-  to make our CMS headless.
-tags: '#JAMstack #Markdown #GitHub #GITAPI-V3 #CMS #Migration #Platform'
-introImage: /assets/img/JAMstack-architecture.png
-path: "idea-behind-jamstack-markdown-and-a-drupal-module"
+layout: post
+title: "Idea behind JAMstack, markdown and a Drupal module"
+subtitle: "We are speaking about JAMstack nowadays. Possibly thinking day and night, how
+  to make our CMS headless."
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [JAMstack, Markdown, GitHub, GITAPI-V3, CMS, Migration, Platform]
+author: Aniruddha Banerjee
 ---
 Hello folks,
 

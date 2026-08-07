@@ -1,12 +1,12 @@
 ---
-templateKey: post
-title: Idea on JAMstack, Markdown and a Drupal module, part 3 — Microservices and why it’s essential
-author: Aniruddha
-date: '2019-10-20 14:00:00'
-introImage: /assets/img/JAMstack-architecture.png
-tags: '#JAMstack #markdown #Drupal #ideas #migration #platform #headless'
-intro_paragraph: Microservices are the most important part of JAMstack, the A stands for API, is the only feature with which a static site can keep it’s fast, secure, robust ness, having a dynamic behavior.
-path: "idea-behind-jamstack-markdown-and-a-drupal-module-architecture"
+layout: post
+title: "Idea on JAMstack, Markdown and a Drupal module, part 3 — Microservices and why it’s essential"
+subtitle: "Microservices are the most important part of JAMstack, the A stands for API, is the only feature with which a static site can keep it’s fast, secure, robust ness, having a dynamic behavior."
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [JAMstack, markdown, Drupal, ideas, migration, platform, headless]
+author: Aniruddha Banerjee
 ---
 According to wikipedia, COMPOSER is an application-level package manager for PHP, and we will learn few more features about it. ![according-to-wikipedia-composer-definition](https://bloganiruddha.files.wordpress.com/2018/06/according-to-wikipedia-composer-definition.png)   Download & Setup
 
@@ -16,7 +16,7 @@ According to wikipedia, COMPOSER is an application-level package manager for PHP
     *   Prepare a shell script/bat file (composersetup.sh/composersetup.bat)
     *   Content of the shell script executable are:
 
-`php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"` `php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52` `599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061’)` `{ echo 'Installer verified'; }` `else { echo 'Installer corrupt’;` `unlink('composer-setup.php'); } echo PHP_EOL;"` `<span style="color: #0000ff;">**php composer-setup.php**</span>` `php -r "unlink('composer-setup.php');"`   Perhaps you noticed the php execution statement is in blue color. Whats in it?   ![i-can-do-more](https://bloganiruddha.files.wordpress.com/2018/06/i-can-do-more.png) So with these options you can setup composer : `php composer-setup.php --install-dir=bin --filename=composerbin --version=1.0.0-alpha8` So how dependencies injected and
+`php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"` `php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52` `599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061’)` `{ echo 'Installer verified'; }` `else { echo 'Installer corrupt’;` `unlink('composer-setup.php'); } echo PHP_EOL;"` `<span style="color:, 0000ff;">**php composer-setup.php**</span>` `php -r "unlink('composer-setup.php');"`   Perhaps you noticed the php execution statement is in blue color. Whats in it?   ![i-can-do-more](https://bloganiruddha.files.wordpress.com/2018/06/i-can-do-more.png) So with these options you can setup composer : `php composer-setup.php --install-dir=bin --filename=composerbin --version=1.0.0-alpha8` So how dependencies injected and
 
 *   What are your need
 *   How composer resolves them

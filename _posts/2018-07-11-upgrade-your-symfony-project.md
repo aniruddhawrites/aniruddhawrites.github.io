@@ -1,12 +1,12 @@
 ---
-templateKey: Upgrade your Symfony project from 2.x to 3.4
 layout: post
-author: Aniruddha
-date: 2018-07-11T00:12:57.000Z
-introImage: /assets/img/Symfony-Development.png
-tags: '#misc'
-intro_paragraph:
-path: "upgrade-your-symfony-project"
+title: "Upgrade your Symfony project from 2.x to 3.4"
+subtitle: "Upgrade your Symfony project from 2.x to 3.4"
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [misc]
+author: Aniruddha Banerjee
 ---
 
 This article may seems to you extra, as the topic has been covered in many places. There are many other and preferred ways to do this. The reason why I chose the topic, is to show what are the difficulties I have faced while migrating one project. So...hang tight: From Symfony 3.x, the symfony installaer came into light. So to install a Symfony 3.4 version you can opt for any 02 paths: 1\. Using installer: Grab Symfony installer

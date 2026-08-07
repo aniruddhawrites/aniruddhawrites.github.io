@@ -43,7 +43,7 @@ The blog contains articles based on real-world enterprise scenarios, including:
 
 Visit the blog:
 
-https://ruddhanib.github.io/aniruddhablog/
+[https://aniruddhawrites.github.io/](https://aniruddhawrites.github.io/)
 
 ## Technology Stack
 

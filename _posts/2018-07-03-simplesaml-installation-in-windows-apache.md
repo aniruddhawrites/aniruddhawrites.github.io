@@ -1,12 +1,12 @@
 ---
-templateKey: post
-title: SimpleSAML Installation in Windows Apache
-author: Aniruddha
-date: '2018-07-03 12:00:00'
-introImage: /assets/img/samlsso2.png
-tags: '#apache #configurations #SAML #single-signon'
-intro_paragraph: Setting up SimpleSAMLphp in windows Apache/Xampp kills my one day once ago. With a very limited documentation, what I able to achieve, I explained in this post. Let me know if you liked/disliked it.
-path: "simplesaml-installation-in-windows-apache"
+layout: post
+title: "SimpleSAML Installation in Windows Apache"
+subtitle: "Setting up SimpleSAMLphp in windows Apache/Xampp kills my one day once ago. With a very limited documentation, what I able to achieve, I explained in this post. Let me know if you liked/disliked it."
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [apache, configurations, SAML, single-signon]
+author: Aniruddha Banerjee
 ---
 Say you want to install SimpleSAMLphp in windows Apache/Xampp. Let me tell you what I did so far:
 

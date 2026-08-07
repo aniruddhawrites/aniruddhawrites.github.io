@@ -1,12 +1,12 @@
 ---
-templateKey: post
-title: How to add successive crons via puppet
-author: Aniruddha
-date: '2018-07-19 10:07:32'
-introImage: /assets/img/puppet-manifest-cron.png
-tags: '#infrastructure #installation #configurations'
-intro_paragraph: Puppet is most popular manifest for Infrastrure Automation. I described a very popular issue, that faced, and how it resolved.
-path: "how-to-add-successive-crons-via-puppet"
+layout: post
+title: "How to add successive crons via puppet"
+subtitle: "Puppet is most popular manifest for Infrastrure Automation. I described a very popular issue, that faced, and how it resolved."
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [infrastructure, installation, configurations]
+author: Aniruddha Banerjee
 ---
 I want to add successive crons via puppet, first one to set as each 10 minutes, and the 2nd one to run in Sunday 7:00PM. The first cron in puppet is working properly, but the 2nd one shows the below error: "Error: Could not retrieve catalog from remote server: Error 400 on SERVER: Invalid relationship: Cron[notifyinactivetargetweekly] { require => File[...notifyinactivetargetweekly.sh] }, because File[...notifyinactivetargetweekly.sh] doesn't seem to be in the catalog Warning: Not using cache on failed catalog Error: Could not retrieve catalog; skipping run" Below are the manifest code.
 
