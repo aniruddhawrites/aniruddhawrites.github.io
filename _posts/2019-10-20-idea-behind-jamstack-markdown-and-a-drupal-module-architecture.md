@@ -2,9 +2,9 @@
 layout: post
 title: "Idea on JAMstack, Markdown and a Drupal module, part 3 — Microservices and why it’s essential"
 subtitle: "Microservices are the most important part of JAMstack, the A stands for API, is the only feature with which a static site can keep it’s fast, secure, robust ness, having a dynamic behavior."
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
+cover-img: /assets/img/JAMstack-architecture.png
+thumbnail-img: /assets/img/JAMstack-architecture.png
+share-img: /assets/img/JAMstack-architecture.png
 tags: [JAMstack, markdown, Drupal, ideas, migration, platform, headless]
 author: Aniruddha Banerjee
 ---

@@ -2,9 +2,9 @@
 layout: post
 title: "The Post-Acquisition Assumption Gap"
 subtitle: "Why a single Product Master change exposed the hidden assumptions behind CDC, SCD, intent capture, and enterprise governance."
-cover-img: /assets/img/consumer-relative-scd\342\200\224the-core-reframe.png
-thumbnail-img: /assets/img/consumer-relative-scd\342\200\224the-core-reframe.png
-share-img: /assets/img/consumer-relative-scd\342\200\224the-core-reframe.png
+cover-img: /assets/img/consumer-relative-scd-the-core-reframe.png
+thumbnail-img: /assets/img/consumer-relative-scd-the-core-reframe.png
+share-img: /assets/img/consumer-relative-scd-the-core-reframe.png
 tags: [DataEngineering, MicrosoftFabric, PowerBI, ServiceLevels, DataPlatform, CloudArchitecture, Latency, PerformanceEngineering, Analytics, DataContention, TechLeadership]
 ---
 ## The Post-Acquisition Assumption Gap

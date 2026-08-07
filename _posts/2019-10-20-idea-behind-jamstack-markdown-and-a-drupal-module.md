@@ -3,9 +3,9 @@ layout: post
 title: "Idea behind JAMstack, markdown and a Drupal module"
 subtitle: "We are speaking about JAMstack nowadays. Possibly thinking day and night, how
   to make our CMS headless."
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/path.jpg
+cover-img: /assets/img/JAmstack.png
+thumbnail-img: /assets/img/JAmstack.png
+share-img: /assets/img/JAmstack.png
 tags: [JAMstack, Markdown, GitHub, GITAPI-V3, CMS, Migration, Platform]
 author: Aniruddha Banerjee
 ---
