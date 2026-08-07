@@ -4,9 +4,9 @@ layout: base
 
 {% include header.html type="page" %}
 
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+<main class="container-fluid">
   <div class="row">
-    <div class="{% if page.full-width %} col {% else %} col-xl-8 col-lg-10 offset-lg-1 {% endif %}">
+    <div class="col">
       {% if page.before-content %}
         <div class="before-content">
           {% for file in page.before-content %}
