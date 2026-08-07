@@ -1,14 +1,11 @@
 ---
 layout: post
-title: The Post-Acquisition Assumption Gap
+title: "The Post-Acquisition Assumption Gap"
 subtitle: "Why a single Product Master change exposed the hidden assumptions behind CDC, SCD, intent capture, and enterprise governance."
-cover-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
-thumbnail-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
-share-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
-categories: [Data Engineering, Amazon Redshift, Data Architecture, Performance Engineering]
+cover-img: /assets/img/consumer-relative-scd\342\200\224the-core-reframe.png
+thumbnail-img: /assets/img/consumer-relative-scd\342\200\224the-core-reframe.png
+share-img: /assets/img/consumer-relative-scd\342\200\224the-core-reframe.png
 tags: [DataEngineering, MicrosoftFabric, PowerBI, ServiceLevels, DataPlatform, CloudArchitecture, Latency, PerformanceEngineering, Analytics, DataContention, TechLeadership]
-author: Aniruddha Banerjee
-reading_time: "12-15 min"
 ---
 ## The Post-Acquisition Assumption Gap
 

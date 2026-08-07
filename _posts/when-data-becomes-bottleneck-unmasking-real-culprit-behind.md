@@ -1,6 +1,6 @@
 ---
 layout: post
-title: When Data Becomes the Bottleneck: Unmasking the Real Culprit Behind SLT Misses
+title: "When Data Becomes the Bottleneck: Unmasking the Real Culprit Behind SLT Misses"
 subtitle: "We kept blaming the data. Turns out, the data was innocent."
 cover-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
 thumbnail-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
