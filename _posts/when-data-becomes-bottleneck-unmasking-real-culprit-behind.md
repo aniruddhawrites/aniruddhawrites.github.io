@@ -1,14 +1,11 @@
 ---
 layout: post
 title: When Data Becomes the Bottleneck: Unmasking the Real Culprit Behind SLT Misses
-subtitle: "We kept blaming the data. Turns out, the data was innocent. 🔍"
+subtitle: "We kept blaming the data. Turns out, the data was innocent."
 cover-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
 thumbnail-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
 share-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
-categories: [Data Engineering, Amazon Redshift, Data Architecture, Performance Engineering]
 tags: [DataEngineering, MicrosoftFabric, PowerBI, ServiceLevels, DataPlatform, CloudArchitecture, Latency, PerformanceEngineering, Analytics, DataContention, TechLeadership]
-author: Aniruddha Banerjee
-reading_time: "12-15 min"
 ---
 
 ## We kept blaming the data. Turns out, the data was innocent. 🔍
