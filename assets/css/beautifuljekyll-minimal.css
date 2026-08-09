@@ -11,3 +11,18 @@ footer.footer-min {
   border-top: 1px solid #eeeeee;
   text-align: center;
 }
+
+.btn-primary {
+  color: #fff;
+  background-color: #199f89;
+  border-color: #199f89;
+}
+
+.text-primary {
+  color: #008AFF !important;
+}
+
+.badge-primary {
+  color: #fff;
+  background-color: #008AFF;
+}
