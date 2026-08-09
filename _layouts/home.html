@@ -5,119 +5,228 @@ full-width: true
 
 {{ content }}
 
-{% assign posts = paginator.posts | default: site.posts %}
-
-<!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
-<ul class="posts-list list-unstyled" role="list">
-  {% for post in posts %}
-  <li class="post-preview">
-    <article>
-
-      {%- capture thumbnail -%}
-        {% if post.thumbnail-img %}
-          {{ post.thumbnail-img }}
-        {% elsif post.cover-img %}
-          {% if post.cover-img.first %}
-            {{ post.cover-img[0].first.first }}
-          {% else %}
-            {{ post.cover-img }}
-          {% endif %}
-        {% else %}
-        {% endif %}
-      {% endcapture %}
-      {% assign thumbnail=thumbnail | strip %}
-
-      {% if site.feed_show_excerpt == false %}
-      {% if thumbnail != "" %}
-      <div class="post-image post-image-normal">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-        </a>
+<!-- BOTTOM HOME PAGE SECTION: ENGINEERING KNOWLEDGE -->
+<section class="enterprise-delivery-section py-5 bg-light border-top">
+  <div class="container-fluid px-lg-5">
+    
+    <!-- SECTION HEADING -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <span class="text-uppercase font-weight-bold text-muted small d-block mb-1">
+          PRACTICAL EXPERIENCE
+        </span>
+        <h2 class="display-5 font-weight-bold text-dark">
+          Engineering Knowledge from Enterprise Delivery
+        </h2>
+        <hr class="mt-2 mb-4" style="width: 60px; height: 3px; background-color: #007bff; border: none; margin-left: 0;">
       </div>
-      {% endif %}
-      {% endif %}
+    </div>
 
-      <a href="{{ post.url | absolute_url }}">
-        <h2 class="post-title">{{ post.title | strip_html }}</h2>
-
-        {% if post.subtitle %}
-          <h3 class="post-subtitle">
-          {{ post.subtitle | strip_html }}
+    <!-- 8:4 RESPONSIVE GRID -->
+    <div class="row align-items-stretch">
+      
+      <!-- LEFT COLUMN (8 Columns on Desktop / Full Width on Mobile) -->
+      <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+        <div class="card h-100 border-0 bg-white shadow-sm p-4 p-md-5">
+          <h3 class="h4 font-weight-bold text-dark mb-3">
+            Real-World Architectural Patterns & Lessons Learned
           </h3>
+          <p class="text-secondary lead mb-4">
+            Insights built from architecting high-throughput data platforms, optimizing complex analytical workloads, and establishing governed cloud infrastructure across enterprise systems.
+          </p>
+
+          <div class="row g-4 mt-2">
+            <!-- Bullet Point 1 -->
+            <div class="col-12 col-md-6 mb-3">
+              <h5 class="h6 font-weight-bold text-dark mb-2">
+                <i class="fas fa-layer-group text-primary mr-2"></i> Scalable Data Platforms
+              </h5>
+              <p class="text-muted small mb-0">
+                End-to-end design strategies for Microsoft Fabric, Databricks Delta Lake, and multi-cloud analytics environments.
+              </p>
+            </div>
+
+            <!-- Bullet Point 2 -->
+            <div class="col-12 col-md-6 mb-3">
+              <h5 class="h6 font-weight-bold text-dark mb-2">
+                <i class="fas fa-tachometer-alt text-primary mr-2"></i> Performance Tuning
+              </h5>
+              <p class="text-muted small mb-0">
+                Eliminating processing bottlenecks, concurrency contention, and expensive query execution patterns.
+              </p>
+            </div>
+
+            <!-- Bullet Point 3 -->
+            <div class="col-12 col-md-6 mb-3">
+              <h5 class="h6 font-weight-bold text-dark mb-2">
+                <i class="fas fa-shield-alt text-primary mr-2"></i> Enterprise Governance
+              </h5>
+              <p class="text-muted small mb-0">
+                Implementing tenant isolation, domain ownership, Medallion architectures, and automated CI/CD pipelines.
+              </p>
+            </div>
+
+            <!-- Bullet Point 4 -->
+            <div class="col-12 col-md-6 mb-3">
+              <h5 class="h6 font-weight-bold text-dark mb-2">
+                <i class="fas fa-brain text-primary mr-2"></i> AI Platform Integration
+              </h5>
+              <p class="text-muted small mb-0">
+                Integrating Generative AI and vector search solutions directly into existing enterprise data pipelines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT CALLOUT CARD (4 Columns on Desktop / Full Width on Mobile) -->
+      <div class="col-12 col-lg-4">
+        <div class="card h-100 bg-dark text-white border-0 shadow-sm p-4 p-md-5 d-flex flex-column justify-content-between">
+          <div>
+            <span class="badge badge-primary text-uppercase font-weight-bold p-2 mb-3">
+              Case Studies & Portfolio
+            </span>
+            <h3 class="h4 font-weight-bold text-white mb-3">
+              Looking for tailored platform architectures?
+            </h3>
+            <p class="text-light small mb-4 opacity-75">
+              Explore key platform implementations, technical blueprints, and past architecture engagements.
+            </p>
+          </div>
+
+          <div class="pt-3 border-top border-secondary">
+            <!-- <a href="{{ '/portfolio' | relative_url }}" class="btn btn-primary btn-block rounded-pill font-weight-bold mb-2">
+              View Portfolio & Projects
+            </a> -->
+            <a href="{{ '/articles' | relative_url }}" class="btn btn-primary btn-block rounded-pill font-weight-bold mb-2">
+              View Articles
+            </a>
+            <a href="{{ '/aboutme' | relative_url }}" class="btn btn-outline-light btn-block rounded-pill font-weight-bold">
+              About the Author
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="container-fluid px-lg-5 d-none">
+  <div class="row mt-4">
+    {% assign posts = paginator.posts | default: site.posts %}
+
+      <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+      <ul class="posts-list list-unstyled" role="list">
+        {% for post in posts %}
+        <li class="post-preview">
+          <article>
+
+            {%- capture thumbnail -%}
+              {% if post.thumbnail-img %}
+                {{ post.thumbnail-img }}
+              {% elsif post.cover-img %}
+                {% if post.cover-img.first %}
+                  {{ post.cover-img[0].first.first }}
+                {% else %}
+                  {{ post.cover-img }}
+                {% endif %}
+              {% else %}
+              {% endif %}
+            {% endcapture %}
+            {% assign thumbnail=thumbnail | strip %}
+
+            {% if site.feed_show_excerpt == false %}
+            {% if thumbnail != "" %}
+            <div class="post-image post-image-normal">
+              <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+                <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+              </a>
+            </div>
+            {% endif %}
+            {% endif %}
+
+            <a href="{{ post.url | absolute_url }}">
+              <h2 class="post-title">{{ post.title | strip_html }}</h2>
+
+              {% if post.subtitle %}
+                <h3 class="post-subtitle">
+                {{ post.subtitle | strip_html }}
+                </h3>
+              {% endif %}
+            </a>
+
+            {% if post.author %}
+              <span>By <strong>{{ post.author | strip_html }}</strong></span>
+            {% endif %}
+            <p class="post-meta">
+              {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+              Posted on {{ post.date | date: date_format }}
+            </p>
+
+            {% if thumbnail != "" %}
+            <div class="post-image post-image-small">
+              <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+                <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+              </a>
+            </div>
+            {% endif %}
+
+            {% unless site.feed_show_excerpt == false %}
+            {% if thumbnail != "" %}
+            <div class="post-image post-image-short">
+              <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+                <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+              </a>
+            </div>
+            {% endif %}
+
+            <div class="post-entry">
+              {% assign excerpt_length = site.excerpt_length | default: 50 %}
+              {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
+              {% assign excerpt_word_count = post.excerpt | number_of_words %}
+              {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
+                <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
+              {% endif %}
+            </div>
+            {% endunless %}
+
+            {% if site.feed_show_tags != false and post.tags.size > 0 %}
+            <div class="blog-tags">
+              <span>Tags:</span>
+              <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
+              <ul class="d-inline list-inline" role="list">
+                {% for tag in post.tags %}
+                <li class="list-inline-item">
+                  <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+
+      {% if paginator.total_pages > 1 %}
+      <ul class="pagination main-pager">
+        {% if paginator.previous_page %}
+        <li class="page-item previous">
+          <a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">
+            <i class="fas fa-arrow-left" alt="Newer Posts"></i>
+            <span class="d-none d-sm-inline-block">Newer Posts</span>
+          </a>
+        </li>
         {% endif %}
-      </a>
-
-      {% if post.author %}
-        <span>By <strong>{{ post.author | strip_html }}</strong></span>
-      {% endif %}
-      <p class="post-meta">
-        {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-        Posted on {{ post.date | date: date_format }}
-      </p>
-
-      {% if thumbnail != "" %}
-      <div class="post-image post-image-small">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-        </a>
-      </div>
-      {% endif %}
-
-      {% unless site.feed_show_excerpt == false %}
-      {% if thumbnail != "" %}
-      <div class="post-image post-image-short">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-        </a>
-      </div>
-      {% endif %}
-
-      <div class="post-entry">
-        {% assign excerpt_length = site.excerpt_length | default: 50 %}
-        {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
+        {% if paginator.next_page %}
+        <li class="page-item next">
+          <a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">
+            <span class="d-none d-sm-inline-block">Older Posts</span>
+            <i class="fas fa-arrow-right" alt="Older Posts"></i>
+          </a>
+        </li>
         {% endif %}
-      </div>
-      {% endunless %}
-
-      {% if site.feed_show_tags != false and post.tags.size > 0 %}
-      <div class="blog-tags">
-        <span>Tags:</span>
-        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
-        <ul class="d-inline list-inline" role="list">
-          {% for tag in post.tags %}
-          <li class="list-inline-item">
-            <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+      </ul>
       {% endif %}
-
-    </article>
-  </li>
-  {% endfor %}
-</ul>
-
-{% if paginator.total_pages > 1 %}
-<ul class="pagination main-pager">
-  {% if paginator.previous_page %}
-  <li class="page-item previous">
-    <a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">
-      <i class="fas fa-arrow-left" alt="Newer Posts"></i>
-      <span class="d-none d-sm-inline-block">Newer Posts</span>
-    </a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="page-item next">
-    <a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">
-      <span class="d-none d-sm-inline-block">Older Posts</span>
-      <i class="fas fa-arrow-right" alt="Older Posts"></i>
-    </a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+  </div>
