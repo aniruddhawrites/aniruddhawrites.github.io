@@ -42,6 +42,9 @@ round-avatar: true
 # then specify the following parameter
 title-img: "/assets/img/logo.png"
 
+post:
+  title: false
+
 
 #####################################
 # --- Footer social media links --- #
