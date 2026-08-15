@@ -66,7 +66,7 @@ Artificial intelligence built on top of Aadhaar-scale identity and UPI-scale tra
 
 None of this is a criticism of what has been built. It is simply what capability-building has always demanded: that today's achievement be treated as tomorrow's foundation rather than tomorrow's finish line. The systems that got India this far were themselves built by people who inherited an earlier, incomplete independence and refused to treat it as complete.
 
-![The Lineage No One Had Mapped](https://aniruddhawrites.github.io//assets/img/capability-evolution.png align="center")
+![Capability Evolution](https://aniruddhawrites.github.io/assets/img/capability-evolution.png)
 
 >India's journey from political independence to the AI era can be viewed as a continuous process of capability-building. The foundation laid after 1947 through institutions, infrastructure, education, and governance created the conditions for a new layer of digital public infrastructure. Systems such as Aadhaar, UPI, DigiLocker, and CoWIN became meaningful not simply because they were launched, but because they evolved into trusted capabilities used at national scale. The next stage is not just about adopting AI, but about building the trust, literacy, governance, security, and responsible innovation needed to sustain that capability.
 
