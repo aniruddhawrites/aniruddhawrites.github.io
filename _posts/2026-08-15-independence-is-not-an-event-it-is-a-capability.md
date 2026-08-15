@@ -2,9 +2,9 @@
 layout: post
 title: "Independence Is Not an Event. It Is a Capability."
 subtitle: "From nation-building to digital public infrastructure, India's journey reminds us that true independence is sustained through capabilities built and strengthened across generations."
-cover-img: /assets/img/independencenot-an-event-capability
-thumbnail-img: /assets/img/independencenot-an-event-capability
-share-img: /assets/img/independencenot-an-event-capability
+cover-img: /assets/img/independencenot-an-event-capability.png
+thumbnail-img: /assets/img/independencenot-an-event-capability.png
+share-img: /assets/img/independencenot-an-event-capability.png
 tags: [Technology, Digital Transformation, Leadership, India, AI & Society]
 ---
 
@@ -92,7 +92,7 @@ It is a capability — built once, and then rebuilt, generation after generation
 
 * [India Stack](https://indiastack.org/)
 * [Digital Public Infrastructure initiatives](https://www.digitalindia.gov.in/)
-* RBI Digital Payments Reports
+* [RBI Digital Payments Reports](https://data.rbi.org.in/DBIE/)
 * [Ministry of Electronics and Information Technology (MeitY)](https://meity.gov.in/)
 
 
