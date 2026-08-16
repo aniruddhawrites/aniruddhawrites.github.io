@@ -163,6 +163,10 @@ Digital public infrastructure is that habit's most recent expression.
 
 **Artificial intelligence will be its next test.**
 
+![Capability evolution from post-independence institution building through digital public infrastructure to the AI era](/assets/img/capability-evolution.png)
+
+> *Capability Evolution: from institution-building after independence to digital public infrastructure and the emerging AI era.*
+
 ---
 
 ## What the Next Chapter Asks For
