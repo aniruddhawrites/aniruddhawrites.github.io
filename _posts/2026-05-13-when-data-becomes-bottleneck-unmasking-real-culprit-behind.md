@@ -6,7 +6,7 @@ subtitle: "We kept blaming the data. Turns out, the data was innocent."
 cover-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
 thumbnail-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
 share-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
-tags: [DataEngineering, MicrosoftFabric, PowerBI, ServiceLevels, DataPlatform, CloudArchitecture, Latency, PerformanceEngineering, Analytics, DataContention, TechLeadership]
+tags: [Microsoft Fabric, Power BI, Data Engineering, Performance Engineering, Cloud Architecture, Data Platform]
 ---
 
 ## The Symptom Everyone Sees, The Cause Nobody Suspects

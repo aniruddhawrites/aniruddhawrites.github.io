@@ -6,7 +6,7 @@ subtitle: "Why a single Product Master change exposed the hidden assumptions beh
 cover-img: /assets/img/consumer-relative-scd-the-core-reframe.png
 thumbnail-img: /assets/img/consumer-relative-scd-the-core-reframe.png
 share-img: /assets/img/consumer-relative-scd-the-core-reframe.png
-tags: [ DataEngineering, DataArchitecture, CDC, SCD, DataGovernance, DataProvenance, EnterpriseArchitecture, DataPlatforms, TechnicalDebt]
+tags: [Data Engineering, Data Architecture, Data Governance, Enterprise Architecture, Technical Debt]
 ---
 ## The Post-Acquisition Assumption Gap
 

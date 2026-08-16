@@ -6,7 +6,7 @@ subtitle: "From nation-building to digital public infrastructure, India's journe
 cover-img: /assets/img/independencenot-an-event-capability.png
 thumbnail-img: /assets/img/independencenot-an-event-capability.png
 share-img: /assets/img/independencenot-an-event-capability.png
-tags: [Technology, Digital Transformation, Leadership, India, AI & Society]
+tags: [AI & Society, Digital Transformation, India, Technology, Leadership]
 ---
 
 ## Editor’s Introduction

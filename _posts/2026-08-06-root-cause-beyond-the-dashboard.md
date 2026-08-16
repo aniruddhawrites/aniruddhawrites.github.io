@@ -6,7 +6,7 @@ subtitle: "A Redshift Investigation That Traced the Real Root Cause Across Five 
 cover-img: /assets/img/distkey-that-went-wrong.png
 thumbnail-img: /assets/img/distkey-that-went-wrong.png
 share-img: /assets/img/distkey-that-went-wrong.png
-tags: [Amazon Redshift, DISTKEY, SORTKEY, Materialized Views, Data Warehouse, Data Architecture, Performance Engineering, Power BI, Enterprise Data Platforms, Data Modeling, Query Optimization, Distribution Skew]
+tags: [Amazon Redshift, Data Architecture, Performance Engineering, Data Modeling, Query Optimization, Enterprise Data Platforms]
 ---
 
 # The DISTKEY That Was Right, and Still Wrong
