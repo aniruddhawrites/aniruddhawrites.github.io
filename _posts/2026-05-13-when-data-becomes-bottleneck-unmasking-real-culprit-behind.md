@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "When Data Becomes the Bottleneck: Unmasking the Real Culprit Behind SLT Misses"
+seo_title: "Why Data Platforms Miss SLTs: Contention, Latency and Performance"
 subtitle: "We kept blaming the data. Turns out, the data was innocent."
 cover-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png
 thumbnail-img: /assets/img/when-data-becomes-bottleneck-unmasking-real-culprit-behind.png

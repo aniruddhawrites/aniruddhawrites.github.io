@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Independence Is Not an Event. It Is a Capability."
+seo_title: "India's Digital Independence: From Freedom to Digital Capability"
 subtitle: "From nation-building to digital public infrastructure, India's journey reminds us that true independence is sustained through capabilities built and strengthened across generations."
 cover-img: /assets/img/independencenot-an-event-capability.png
 thumbnail-img: /assets/img/independencenot-an-event-capability.png

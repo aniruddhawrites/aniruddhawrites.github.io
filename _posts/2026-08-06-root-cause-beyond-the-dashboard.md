@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The DISTKEY That Was Right, and Still Wrong"
+seo_title: "Amazon Redshift DISTKEY: Why a Correct Key Can Still Hurt Performance"
 subtitle: "A Redshift Investigation That Traced the Real Root Cause Across Five Layers"
 cover-img: /assets/img/distkey-that-went-wrong.png
 thumbnail-img: /assets/img/distkey-that-went-wrong.png

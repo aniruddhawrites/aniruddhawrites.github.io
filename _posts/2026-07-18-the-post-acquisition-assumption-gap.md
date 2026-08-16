@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Post-Acquisition Assumption Gap"
+seo_title: "Post-Acquisition Data Engineering: CDC, SCD and Hidden Architecture Assumptions"
 subtitle: "Why a single Product Master change exposed the hidden assumptions behind CDC, SCD, intent capture, and enterprise governance."
 cover-img: /assets/img/consumer-relative-scd-the-core-reframe.png
 thumbnail-img: /assets/img/consumer-relative-scd-the-core-reframe.png

@@ -3,7 +3,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   {% capture pagetitle %}
-    {%- if page.share-title -%}
+    {% if page.seo_title %}
+      {{ page.seo_title | escape }} | {{ site.title | escape }}
+    {%- elsif page.share-title -%}
       {{ page.share-title | strip_html | xml_escape }}
     {%- elsif page.title -%}
       {{ page.title | strip_html | xml_escape  }}
@@ -148,8 +150,8 @@
   <meta name="twitter:site" content="@{{ site.social-network-links.twitter }}">
   <meta name="twitter:creator" content="@{{ site.social-network-links.twitter }}">
 
-  <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description" content="{{ description }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
 
   {% if img != "" %}
   <meta name="twitter:image" content="{{ img | absolute_url }}">
@@ -170,6 +172,33 @@
     {% for file in page.head-extra %}
       {% include {{ file }} %}
     {% endfor %}
+  {% endif %}
+
+  {% if page.id %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ description | strip_html | strip_newlines | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "name": {{ author | strip_html | strip_newlines | jsonify }},
+      "url": "{{ site.url }}"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": {{ site.author | default: "Aniruddha Banerjee" | jsonify }},
+      "url": "{{ site.url }}"
+    }{% if img != "" %},
+    "image": {
+      "@type": "ImageObject",
+      "url": {{ img | absolute_url | jsonify }}
+    }{% endif %}
+  }
+  </script>
   {% endif %}
 
 </head>
