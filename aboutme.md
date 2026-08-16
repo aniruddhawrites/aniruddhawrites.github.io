@@ -1,97 +1,253 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: "About Aniruddha"
+subtitle: "Enterprise Technology. Explained Clearly."
+permalink: /aboutme/
 ---
 
-<!-- ABOUT ME PAGE / SECTION -->
-<div class="container my-5">
-  <div class="row justify-content-center">
-    <div class="col-12 col-lg-9">
+<div class="author-profile-card">
 
-      <!-- PROFILE HEADER CARD (DARK BACKGROUND) -->
-      <div class="card border-0 shadow-sm text-white text-center p-4 p-md-5 mb-4" style="background-color: #0f172a; border-radius: 12px;">
-        
-        <!-- PROFILE AVATAR WITH OVERLAY RING -->
-        <div class="mx-auto mb-3" style="width: 120px; height: 120px;">
-          <img 
-            src="https://lh3.googleusercontent.com/a/ACg8ocKytNCWSS0xYsPWJb4R6NUAHvAEXNTtUgRpExb-vcTx6KdpoLDl=s96-c" 
-            alt="Aniruddha Banerjee" 
-            class="rounded-circle shadow" 
-            style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #ffffff;"
-          >
-        </div>
-
-        <!-- NAME & USERNAME -->
-        <h1 class="h2 font-weight-bold mb-1 text-white">Aniruddha Banerjee</h1>
-        <p class="text-muted-custom small mb-3" style="color: #94a3b8;">
-          @ruddhani &nbsp;•&nbsp; <i class="fas fa-map-marker-alt mr-1"></i>Kolkata, India
-        </p>
-
-        <!-- TAGLINE -->
-        <p class="lead mb-4 mx-auto text-light opacity-90" style="max-width: 680px; font-size: 1.05rem;">
-          Learn AI, Data Engineering, Cloud Architecture, Microsoft Fabric, Databricks, Azure, AWS, Power BI & Automation through practical tutorials.
-        </p>
-
-        <!-- ACTIONS & SOCIAL LINKS -->
-        <div class="d-flex justify-content-center align-items-center flex-wrap gap-2">
-          <a href="https://hashnode.com/@ruddhani" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-pill font-weight-bold px-3 mr-2 mb-2">
-            <i class="fas fa-share-alt mr-1"></i> Share Profile
-          </a>
-          <a href="https://x.com" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2 mr-2" style="width: 36px; height: 36px; padding: 6px 0;">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2 mr-2" style="width: 36px; height: 36px; padding: 6px 0;">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2" style="width: 36px; height: 36px; padding: 6px 0;">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </div>
-
-      </div>
-
-      <!-- ABOUT DETAILS CARD -->
-      <div class="card border-0 shadow-sm p-4 p-md-5 bg-white" style="border-radius: 12px;">
-        <h2 class="h4 font-weight-bold text-dark mb-3">About</h2>
-        
-        <p class="text-secondary mb-3">
-          Hi, I'm Aniruddha <span class="wave">👋</span>
-        </p>
-
-        <p class="text-secondary mb-4">
-          I'm an Associate Consultant with 18+ years of experience building enterprise data and analytics solutions.
-        </p>
-
-        <p class="text-secondary mb-3">
-          I started this blog to share practical knowledge, explain complex technical concepts, and document lessons learned while working with modern data platforms.
-        </p>
-
-        <!-- TOPICS / COVERAGE LIST -->
-        <h3 class="h6 font-weight-bold text-dark mt-4 mb-3">Here you'll find articles on:</h3>
-        
-        <div class="d-flex flex-wrap gap-2 mb-4">
-          <span class="badge badge-light border text-dark p-2 mb-2">Microsoft Fabric</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">Power BI</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">Databricks</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">Azure & AWS</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">Apache Airflow</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">AWS Glue</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">Data Engineering</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">Cloud Architecture</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">AI & Analytics</span>
-          <span class="badge badge-light border text-dark p-2 mb-2">Solution Design</span>
-        </div>
-
-        <p class="text-secondary mb-3">
-          Most articles are inspired by real-world engineering challenges, research, and hands-on experience. My goal is simple: write content that is technically accurate, practical, and easy to understand.
-        </p>
-
-        <p class="text-secondary mb-0">
-          If even one article helps you solve a problem or learn something new, then this blog has served its purpose.
-        </p>
-      </div>
-
-    </div>
+  <div class="author-profile-image">
+    <img src="/assets/img/aniruddha-banerjee.png"
+         alt="Aniruddha Banerjee"
+         loading="eager">
   </div>
+
+  <div class="author-profile-content">
+
+    <h1>Aniruddha Banerjee</h1>
+
+    <p class="author-role">
+      Enterprise Data &amp; Technology Architect
+    </p>
+
+    <p class="author-speciality">
+      Technical Writer · Data · AI · Cloud · Architecture
+    </p>
+
+    <p class="author-intro">
+      I write about the engineering decisions, architectural trade-offs,
+      and failure patterns behind complex enterprise technology systems.
+    </p>
+
+    <div class="author-links">
+      <a href="https://www.linkedin.com/in/ruddhani/" target="_blank" rel="noopener">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/aniruddhawrites" target="_blank" rel="noopener">
+        GitHub
+      </a>
+
+      <a href="https://aniruddhawrites.medium.com/" target="_blank" rel="noopener">
+        Medium
+      </a>
+
+      <a href="https://x.com/ruddhani" target="_blank" rel="noopener">
+        X
+      </a>
+    </div>
+
+  </div>
+
 </div>
+
+---
+
+## About Aniruddha Writes
+
+**Aniruddha Writes** is my independent technology writing platform.
+
+I have 18+ years of experience working across enterprise data, analytics, cloud platforms, architecture, performance engineering, and technology delivery.
+
+I created this site to explore the engineering problems that are often hidden behind successful-looking technology platforms.
+
+Not just:
+
+> *How does this technology work?*
+
+But:
+
+> **Why was this architecture chosen?**
+
+> **What assumptions were made?**
+
+> **What happens when those assumptions stop being true?**
+
+> **And what can we learn from the failure?**
+
+That's the perspective behind the writing published here.
+
+---
+
+## What I Write About
+
+### Enterprise Data & Analytics
+
+- Microsoft Fabric
+- Power BI
+- Databricks
+- Amazon Redshift
+- Data engineering
+- Data modelling
+- Performance engineering
+- Analytics architecture
+- Enterprise data platforms
+
+### Cloud & Architecture
+
+- AWS
+- Azure
+- Cloud data platforms
+- Distributed systems
+- Enterprise integration
+- Platform engineering
+- Architecture trade-offs
+- Performance and scalability
+
+### AI & Emerging Technology
+
+- Generative AI
+- AI-enabled data platforms
+- RAG and enterprise AI
+- AI architecture
+- Automation
+- AI adoption
+- The organisational impact of AI
+
+### Technology & Society
+
+Technology doesn't exist in isolation.
+
+I also write about the broader relationship between technology and society — including digital public infrastructure, technology adoption, capability building, and the responsibilities that come with increasingly powerful technology.
+
+---
+
+## How I Approach Technical Writing
+
+I don't believe good technical writing is simply documentation with better grammar.
+
+The strongest technical stories start with a real problem.
+
+Why did the system fail?
+
+Why did an apparently correct architectural decision create an unexpected bottleneck?
+
+Which assumption turned out to be wrong?
+
+What trade-off did the engineering team make?
+
+What happened when the system encountered real-world scale?
+
+And most importantly:
+
+**What can another engineer, architect, or technology leader learn from it?**
+
+My goal is to turn complex technical subjects into content that is:
+
+- technically credible
+- practically useful
+- understandable without unnecessary jargon
+- grounded in real engineering problems
+- interesting enough to keep reading
+
+---
+
+## Selected Writing
+
+### When Data Becomes the Bottleneck
+
+An investigation into how concurrency, cross-region latency, capacity constraints, and gateway behaviour combined to create enterprise analytics SLT failures.
+
+[Read the article →](/2026-05-13-when-data-becomes-bottleneck-unmasking-real-culprit-behind/)
+
+---
+
+### The DISTKEY That Was Right, and Still Wrong
+
+A Redshift investigation into how a locally correct physical-design decision created problems for downstream consumers.
+
+[Read the article →](/2026-08-06-root-cause-beyond-the-dashboard/)
+
+---
+
+### The Post-Acquisition Assumption Gap
+
+How inherited assumptions around CDC, SCD, provenance, and governance can survive long after systems have been technically integrated.
+
+[Read the article →](/2026-07-18-the-post-acquisition-assumption-gap/)
+
+---
+
+### Independence Is Not an Event. It Is a Capability.
+
+A reflection on India's journey from political independence to institutional and digital capability — and what the AI era may demand next.
+
+[Read the article →](/2026-08-15-independence-is-not-an-event-it-is-a-capability/)
+
+---
+
+## For Organizations & Publications
+
+I am interested in working with organizations, publications, and technology teams that need complex technical subjects turned into clear, credible content.
+
+Potential areas include:
+
+- Technical thought-leadership articles
+- Enterprise technology case studies
+- Engineering investigations
+- Architecture explainers
+- Data and AI articles
+- Technical blogs
+- White-paper style content
+- Technology research and analysis
+
+The strongest fit is content where **technical understanding and clear storytelling both matter**.
+
+If your subject is technically complex but your audience shouldn't need to be an engineer to understand it, that's where I can help.
+
+### Work With Me
+
+If you'd like to discuss a technical writing project, article, research assignment, or collaboration:
+
+**[Connect with me on LinkedIn →](https://www.linkedin.com/in/ruddhani/)**
+
+---
+
+## Beyond the Articles
+
+The writing here is supported by hands-on work across enterprise technology platforms.
+
+My interests include:
+
+**Data Platforms**  
+Microsoft Fabric · Power BI · Databricks · Amazon Redshift
+
+**Cloud**  
+AWS · Azure · Cloud Architecture
+
+**Engineering**  
+Data Engineering · Performance Engineering · Data Modelling · Analytics
+
+**AI**  
+Generative AI · RAG · AI Architecture · Automation
+
+**Technology Leadership**  
+Architecture · Delivery · Platform Strategy · Technical Problem Solving
+
+---
+
+## Connect
+
+If you'd like to discuss an article, technical writing project, collaboration, or research topic:
+
+- [LinkedIn](https://www.linkedin.com/in/ruddhani/)
+- [GitHub](https://github.com/ruddhanib)
+- [Medium](https://ruddhani.medium.com/)
+- [X](https://x.com/ruddhani)
+
+---
+
+> **Aniruddha Writes**
+>
+> *Complex technology. Clear thinking. Practical insight.*
