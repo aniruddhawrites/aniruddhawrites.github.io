@@ -6,7 +6,7 @@ subtitle: "A Redshift Investigation That Traced the Real Root Cause Across Five 
 cover-img: /assets/img/distkey-that-went-wrong.png
 thumbnail-img: /assets/img/distkey-that-went-wrong.png
 share-img: /assets/img/distkey-that-went-wrong.png
-tags: [Amazon Redshift,  DISTKEY, SORTKEY, Materialized Views, Data Warehouse, Data Architecture, Performance Tuning, Power BI, Enterprise Data Platforms, Data Modeling]
+tags: [Amazon Redshift, DISTKEY, SORTKEY, Materialized Views, Data Warehouse, Data Architecture, Performance Engineering, Power BI, Enterprise Data Platforms, Data Modeling, Query Optimization, Distribution Skew]
 ---
 
 # The DISTKEY That Was Right, and Still Wrong
@@ -17,11 +17,13 @@ tags: [Amazon Redshift,  DISTKEY, SORTKEY, Materialized Views, Data Warehouse, D
 
 ## Author's Note
 
-This account is inspired by recurring patterns observed in enterprise Amazon Redshift environments. Table names, business context, and specific figures have been generalized to protect confidentiality. The technical mechanisms, investigation sequence, and architectural trade-offs described remain representative of genuine production challenges in large-scale, multi-consumer analytical platforms.
+This account is inspired by recurring patterns observed in enterprise Amazon Redshift environments. Table names, business context, and specific figures have been generalized to protect confidentiality.
+
+The technical mechanisms, investigation sequence, and architectural trade-offs described remain representative of genuine production challenges in large-scale, multi-consumer analytical platforms.
 
 ---
 
-# Section 1: The Morning Nothing Was Supposed to Be Wrong
+## The Morning Nothing Was Supposed to Be Wrong
 
 Eight-oh-four on a Tuesday. Three messages hit the team channel inside sixty seconds, from three people who hadn't talked to each other yet. That's the tell, more than the message itself — when three different people notice the same thing independently before anyone's had a chance to compare notes, you're not dealing with someone's misconfigured laptop.
 
@@ -45,7 +47,7 @@ By nine we had a narrowed problem, a clean baseline, and genuinely no cause yet.
 
 ---
 
-# Section 2: The Fix That Was Right on Paper
+## The Fix That Was Right on Paper
 
 By nine-fifteen someone had the EXPLAIN plan up, and you could feel the room relax the way rooms do when something finally has a name. There it was — `XN Hash Join DS_DIST_BOTH` between `fact_sales` and `dim_store`. Not buried. First page of any Redshift tuning guide, plain as day: both sides of the join getting redistributed across every slice, on every execution.
 
@@ -67,8 +69,8 @@ That's not a process the team forgot to follow. It's a capability the platform n
 
 ### Diagram D2 — The Lineage No One Had Mapped
 
-*flowchart TB
-    DS["dim_store<br/>Shared Conformed Dimension"]    DS --> FS["fact_sales<br/>Executive Dashboard"]    DS --> FT["fact_customer_traffic<br/>Staffing Optimization"]    DS --> FI["fact_inventory<br/>Replenishment Planning"]    DS --> FL["fact_labor_hours<br/>Labor Analytics"]    DS --> VF["Vendor Forecasting Tool"]    DS -.-> UNK["Unknown Consumers<br/>(No Lineage Visibility)"]    classDef healthy fill:#d5f5e3,stroke:#2e8b57,color:#000;    classDef warning fill:#fdecea,stroke:#d9534f,color:#000;    classDef unknown fill:#f8f9fa,stroke:#6c757d,color:#000,stroke-dasharray: 5 5;    class FS healthy;    class FT warning;    class FI warning;    class FL warning;    class VF warning;    class UNK unknown;*
+![The Lineage No One Had Mapped](https://aniruddhawrites.github.io/assets/img/d2.png align="center")
+
 > * A shared conformed dimension can act as an enterprise hub. Without complete lineage visibility, a local optimization may unknowingly impact downstream consumers that were never evaluated. *
 
 A quick word on scope, because the mechanics here are Redshift's, specifically — DISTKEY, slice placement, `DS_DIST_BOTH`. On Snowflake this conversation doesn't happen the same way; there's no distribution key to get wrong, clustering behaves on a completely different axis. On Fabric, you're reasoning about V-Order and file compaction, not which slice a row lives on.
@@ -81,7 +83,7 @@ It took less than a week to learn it hadn't ended. It had moved. Two tickets lan
 
 ---
 
-# Section 3: Two Tickets, Same Week, No Shared Cause Line
+## Two Tickets, Same Week, No Shared Cause Line
 
 The first came from the store-traffic team Thursday afternoon.
 
@@ -129,11 +131,7 @@ It became a question about the architecture itself.
 
 ---
 
-# Section 4: Following the Lineage, Not the Symptom
-
-### Environment at a Glance
-
-*(Insert Environment Diagram Here)*
+## Following the Lineage, Not the Symptom
 
 At this point the investigation had to stop being reactive.
 
@@ -141,18 +139,22 @@ Chasing each symptom individually would have produced three separate fixes on to
 
 Instead, we traced the lineage.
 
+### Environment at a Glance
+
 The platform looked like this:
 
-- L1 — landing and standardization
-- WRK — transformation and business rules
-- DWH — conformed enterprise model
-- Materialized Views — performance acceleration layer
-- Data Marts and Semantic Models — consumer-facing analytics
+- **L1** — landing and standardization
+- **WRK** — transformation and business rules
+- **DWH** — conformed enterprise model
+- **Materialized Views** — performance acceleration layer
+- **Data Marts and Semantic Models** — consumer-facing analytics
+
+![Environment at a Glance](https://aniruddhawrites.github.io/assets/img/dall.png align="center")
 
 ### Diagram D3 — One Change, Three Symptoms
 
-flowchart TB
-    CHANGE["DISTKEY Change on dim_store"]    CHANGE --> S1["Executive Dashboard<br/>Redistribution Eliminated<br/>90 sec → 11 sec"]    CHANGE --> S2["Customer Traffic Model<br/>Slice-Level Skew<br/>Memory Spill"]    CHANGE --> S3["Inventory Load<br/>Background Redistribution<br/>I/O Contention"]    CHANGE --> S4["Materialized View<br/>Incremental Refresh Lost<br/>Full Recompute"]    classDef success fill:#d5f5e3,stroke:#2e8b57,color:#000;    classDef issue fill:#fdecea,stroke:#d9534f,color:#000;    class S1 success;    class S2 issue;    class S3 issue;    class S4 issue;
+![One Change, Three Symptoms](https://aniruddhawrites.github.io/assets/img/d3.png align="center")
+
 > * One physical design change produced four different outcomes. The original dashboard improved dramatically, while other consumers experienced entirely different performance symptoms through unrelated mechanisms. *
 
 We traced each affected consumer through the stack.
@@ -172,7 +174,7 @@ One upstream event.
 And for the first time, the investigation started moving away from the dashboard and toward the model itself.
 
 ---
-# Section 5: What "Skewed" Actually Meant Here
+## What "Skewed" Actually Meant Here
 
 The traffic-model spill deserved its own look, because it's where the investigation nearly went sideways a second time.
 
@@ -230,7 +232,7 @@ It started being about modeling decisions.
 
 ---
 
-# Section 6: The Grain Problem Underneath the Distribution Problem
+## The Grain Problem Underneath the Distribution Problem
 
 The question that actually needed answering wasn't:
 
@@ -312,7 +314,7 @@ Everything downstream was merely experiencing the consequences.
 
 ---
 
-# Section 7: Why We Couldn't Just Fix dim_store
+## Why We Couldn't Just Fix dim_store
 
 The obvious solution seemed straightforward.
 
@@ -380,7 +382,7 @@ Somewhere inside the platform.
 
 ---
 
-# Section 8: Redesigning the Work Layer, Not the Interface
+## Redesigning the Work Layer, Not the Interface
 
 The eventual solution came from separating two concepts that had accidentally become linked.
 
@@ -426,32 +428,7 @@ Not for business logic.
 
 ### Diagram D4 — WRK Layer Redesign: Salting Without Breaking the Contract
 
-flowchart LR
-
-    A["WRK Layer Fact Data"]
-
-    B{"High Volume Store<br/>or Digital Channel?"}
-
-    C["Apply Salting<br/>Hash(order_id) % N"]
-
-    D["Keep Natural<br/>store_id"]
-
-    E["Distributed Processing"]
-
-    F["DWH Reconciliation<br/>Re-Aggregate to Original Grain"]
-
-    G["Published Consumer Layer<br/>Contract Unchanged"]
-
-    A --> B
-
-    B -->|Yes| C
-    B -->|No| D
-
-    C --> E
-    D --> E
-
-    E --> F
-    F --> G
+![WRK Layer Redesign: Salting Without Breaking the Contract](https://aniruddhawrites.github.io/assets/img/d4.png align="center")
 
 > Salting was introduced only within the WRK layer to improve physical distribution. The business-facing grain and consumer contracts remained unchanged after reconciliation in DWH.
 
@@ -496,7 +473,7 @@ It was to create guardrails that would detect the next one sooner.
 
 ---
 
-# Section 9: What We Rejected, and Why
+## What We Rejected, and Why
 
 Several alternatives were considered.
 
@@ -616,7 +593,7 @@ The investigation had already proven where that approach leads.
 
 ---
 
-# Section 10: What Actually Changed, Measured Carefully
+## What Actually Changed, Measured Carefully
 
 Engineering articles often overstate outcomes.
 
@@ -674,28 +651,13 @@ And often more valuable.
 
 ### Diagram D5 — Before vs After: Where the Skew Lives
 
-flowchart RL
-
-    DASH["Dashboard Slowdown"]
-    MART["Data Mart"]
-    MV["Materialized View"]
-    DWH["DWH Layer"]
-    WRK["WRK Layer"]
-    L1["L1 Layer"]
-    ROOT["Grain Design Decision"]
-
-    DASH --> MART
-    MART --> MV
-    MV --> DWH
-    DWH --> WRK
-    WRK --> L1
-    L1 --> ROOT
+![Before vs After: Where the Skew Lives](https://aniruddhawrites.github.io/assets/img/d5.png align="center")
 
 > The investigation succeeded because the team stopped treating the dashboard as the problem and followed the lineage upstream until reaching the original modeling decision that created the downstream symptoms.
 
 ---
 
-# Section 11: What's Still Unresolved
+## What's Still Unresolved
 
 Two things remain unresolved.
 
@@ -741,7 +703,7 @@ That's exactly what happened here.
 
 ---
 
-# Section 12: The Lesson That Outlasted the Ticket
+## The Lesson That Outlasted the Ticket
 
 Looking back, every individual decision made during the incident was defensible.
 
@@ -821,84 +783,55 @@ This time, at least, we'll know where to look before the third ticket lands.
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
-1. A correct DISTKEY can still create enterprise-wide problems when applied to a shared conformed dimension.
-2. Query-level optimization and platform-level optimization are not the same thing.
-3. Distribution skew often originates from business-modeling decisions, not database-engine behavior.
-4. VACUUM cannot solve slice-level distribution skew.
-5. Shared dimensions are architectural contracts, not local implementation details.
-6. Physical optimization decisions should always be evaluated against all known consumers.
-7. Lineage visibility is as important as performance visibility.
-8. Sometimes the best fix happens in the WRK layer, not in the published model.
-9. Enterprise performance issues frequently originate multiple layers upstream from where symptoms appear.
-10. The most valuable outcome is often predictability, not speed.
-
----
-
-# Environment at a Glance
-
-flowchart RL
-
-    DASH["Dashboard Slowdown"]
-    MART["Data Mart"]
-    MV["Materialized View"]
-    DWH["DWH Layer"]
-    WRK["WRK Layer"]
-    L1["L1 Layer"]
-    ROOT["Grain Design Decision"]
-
-    DASH --> MART
-    MART --> MV
-    MV --> DWH
-    DWH --> WRK
-    WRK --> L1
-    L1 --> ROOT
-
-> The investigation succeeded because the team stopped treating the dashboard as the problem and followed the lineage upstream until reaching the original modeling decision that created the downstream symptoms.
+1. **A correct DISTKEY can still create enterprise-wide problems** when applied to a shared conformed dimension.
+2. **Query-level optimization is not the same as platform-level optimization.**
+3. **Distribution skew can originate in business modelling**, not database-engine behaviour.
+4. **VACUUM cannot solve slice-level distribution skew.**
+5. **Shared dimensions are architectural contracts**, not local implementation details.
+6. **Physical design changes must be evaluated against all known consumers.**
+7. **Lineage visibility is as important as performance visibility.**
+8. **The best immediate fix may belong in the work layer**, while preserving the published model.
+9. **Enterprise performance problems frequently originate multiple layers upstream from where symptoms appear.**
+10. **Predictability is often a more valuable outcome than raw speed.**
 
 ---
 
-# References
+## References
 
 - Amazon Redshift Distribution Styles
 - Amazon Redshift Sort Keys
 - Amazon Redshift Materialized Views
 - Amazon Redshift System Tables and Views
-- The Data Warehouse Toolkit — Ralph Kimball
+- *The Data Warehouse Toolkit* — Ralph Kimball
 - AWS Prescriptive Guidance
 
 ---
 
-# Related Articles
+## Related Articles
 
 ### The Post-Acquisition Assumption Gap
+
 How inherited assumptions create hidden risks across enterprise data platforms.
 
+[Read the article](/2026-07-18-the-post-acquisition-assumption-gap/)
+
 ### When Data Becomes the Bottleneck
+
 Unmasking the real causes behind SLA misses in modern analytics ecosystems.
 
-### Slowly Changing Dimensions in the Real World
-Why SCD design decisions often create consequences years after implementation.
+[Read the article](/2026-05-13-when-data-becomes-bottleneck-unmasking-real-culprit-behind/)
 
 ---
 
-# Author
+## About the Author
 
-**Aniruddha Banerjee**
+**Aniruddha Banerjee** is a Project Manager and Data Architect working across enterprise data engineering, cloud and analytics platforms, performance engineering, and technology architecture.
 
-Project Manager | Data Architect | Enterprise Data Engineering | Cloud & Analytics Platforms
+Through **Aniruddha Writes**, he explores the engineering decisions behind complex data platforms — particularly the assumptions, trade-offs, and failure patterns that only become visible at enterprise scale.
 
-Sharing real-world lessons from enterprise-scale data platforms, architecture investigations, performance engineering, and operational excellence.
-
-GitHub Pages:
-https://ruddhanib.github.io/aniruddhablog/
-
-LinkedIn:
-https://www.linkedin.com/in/ruddhani/
-
-Medium:
-https://ruddhani.medium.com/
+[LinkedIn](https://www.linkedin.com/in/ruddhani/) · [GitHub](https://github.com/aniruddhawrites) · [Medium](https://ruddhani.medium.com/)
 
 ---
 
