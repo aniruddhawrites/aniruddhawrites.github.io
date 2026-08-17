@@ -194,24 +194,61 @@ permalink: /aboutme/
     </li>
     </ul>
     </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h2 id="selected-writing">Selected Writing</h2>
+    </div>
+    <div class="cl-preview-section"><h2 id="selected-writing">Selected Writing</h2>
     </div><div class="cl-preview-section"><h3 id="when-data-becomes-the-bottleneck">When Data Becomes the Bottleneck</h3>
-    </div><div class="cl-preview-section"><p>An investigation into how concurrency, cross-region latency, capacity constraints, and gateway behaviour combined to create enterprise analytics SLT failures.</p>
-    </div><div class="cl-preview-section"><p><a href="/2026-05-13-when-data-becomes-bottleneck-unmasking-real-culprit-behind/">Read the article →</a></p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h3 id="the-distkey-that-was-right-and-still-wrong">The DISTKEY That Was Right, and Still Wrong</h3>
-    </div><div class="cl-preview-section"><p>A Redshift investigation into how a locally correct physical-design decision created problems for downstream consumers.</p>
-    </div><div class="cl-preview-section"><p><a href="/2026-08-06-root-cause-beyond-the-dashboard/">Read the article →</a></p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h3 id="the-post-acquisition-assumption-gap">The Post-Acquisition Assumption Gap</h3>
-    </div><div class="cl-preview-section"><p>How inherited assumptions around CDC, SCD, provenance, and governance can survive long after systems have been technically integrated.</p>
-    </div><div class="cl-preview-section"><p><a href="/2026-07-18-the-post-acquisition-assumption-gap/">Read the article →</a></p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h3 id="independence-is-not-an-event.-it-is-a-capability.">Independence Is Not an Event. It Is a Capability.</h3>
-    </div><div class="cl-preview-section"><p>A reflection on India’s journey from political independence to institutional and digital capability — and what the AI era may demand next.</p>
-    </div><div class="cl-preview-section"><p><a href="/2026-08-15-independence-is-not-an-event-it-is-a-capability/">Read the article →</a></p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h2 id="for-organizations--publications">For Organizations &amp; Publications</h2>
+    </div>
+    <div class="row">
+      <div class="col col-lg-3 col-md-2 col-sm-1">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">When Data Becomes the Bottleneck</h5>
+            <p class="card-text">An investigation into how concurrency, cross-region latency, capacity constraints, and gateway behaviour combined to create enterprise analytics SLT failures.</p>
+            <a href="/2026-05-13-when-data-becomes-bottleneck-unmasking-real-culprit-behind/" class="btn btn-primary">Read the article →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-md-2 col-sm-1">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">The DISTKEY That Was Right, and Still Wrong</h5>
+            <p class="card-text">A Redshift investigation into how a locally correct physical-design decision created problems for downstream consumers.</p>
+            <a href="/2026-08-06-root-cause-beyond-the-dashboard/" class="btn btn-primary">Read the article →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-md-2 col-sm-1">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">The Post-Acquisition Assumption Gap</h5>
+            <p class="card-text">How inherited assumptions around CDC, SCD, provenance, and governance can survive long after systems have been technically integrated.</p>
+            <a href="/2026-07-18-the-post-acquisition-assumption-gap/" class="btn btn-primary">Read the article →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-3 col-md-2 col-sm-1">
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Independence Is Not an Event. It Is a Capability.</h5>
+            <p class="card-text">A reflection on India’s journey from political independence to institutional and digital capability — and what the AI era may demand next.</p>
+            <a href="/2026-08-15-independence-is-not-an-event-it-is-a-capability/" class="btn btn-primary">Read the article →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cl-preview-section"><h2 id="for-organizations--publications">For Organizations &amp; Publications</h2>
     </div><div class="cl-preview-section"><p>I am interested in working with organizations, publications, and technology teams that need complex technical subjects turned into clear, credible content.</p>
     </div><div class="cl-preview-section"><p>Potential areas include:</p>
     </div><div class="cl-preview-section"><ul>
