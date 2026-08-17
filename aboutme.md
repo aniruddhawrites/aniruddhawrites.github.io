@@ -5,56 +5,58 @@ subtitle: "Enterprise Technology. Explained Clearly."
 permalink: /aboutme/
 ---
 
-<div class="author-profile-card">
-
-  <div class="author-profile-image">
-    <img src="/assets/img/aniruddha-banerjee.png"
+  <!-- PROFILE HEADER CARD (DARK BACKGROUND) -->
+  <div class="card border-0 shadow-sm text-white text-center p-4 p-md-5 mb-4" style="background-color: #0f172a; border-radius: 12px;">
+    
+    <!-- PROFILE AVATAR WITH OVERLAY RING -->
+    <div class="mx-auto mb-3" style="width: 120px; height: 120px;">
+      <img 
+        src="/assets/img/aniruddha-banerjee.png"
          alt="Aniruddha Banerjee"
-         loading="eager">
-  </div>
+         loading="eager"
+        class="rounded-circle shadow" 
+        style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #ffffff;"
+      >
+    </div>
 
-  <div class="author-profile-content">
-
-    <h1>Aniruddha Banerjee</h1>
-
-    <p class="author-role">
-      Enterprise Data &amp; Technology Architect
+    <!-- NAME & USERNAME -->
+    <h1 class="h2 font-weight-bold mb-1 text-white">Aniruddha Banerjee</h1>
+    <p class="text-muted-custom small mb-3" style="color: #94a3b8;">
+      Enterprise Data &amp; <i class="fas fa-map-marker-alt mr-1"></i>Technology Architect
     </p>
 
-    <p class="author-speciality">
+    <!-- TAGLINE -->
+    <p class="lead mb-4 mx-auto text-light opacity-90" style="max-width: 680px; font-size: 1.05rem;">
       Technical Writer · Data · AI · Cloud · Architecture
     </p>
 
-    <p class="author-intro">
+    <!-- TAGLINE -->
+    <p class="lead mb-4 mx-auto text-light opacity-90" style="max-width: 680px; font-size: 1.05rem;">
       I write about the engineering decisions, architectural trade-offs,
       and failure patterns behind complex enterprise technology systems.
     </p>
 
-    <div class="author-links">
-      <a href="https://www.linkedin.com/in/ruddhani/" target="_blank" rel="noopener">
-        LinkedIn
+    <!-- ACTIONS & SOCIAL LINKS -->
+    <div class="d-flex justify-content-center align-items-center flex-wrap gap-2">
+      <a href="https://aniruddhawrites.hashnode.dev/" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-pill font-weight-bold px-3 mr-2 mb-2">
+        <i class="fas fa-share-alt mr-1"></i> Share Profile
       </a>
-
-      <a href="https://github.com/aniruddhawrites" target="_blank" rel="noopener">
-        GitHub
+      <a href="https://x.com/ruddhani" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2 mr-2" style="width: 36px; height: 36px; padding: 6px 0;">
+        <i class="fab fa-twitter"></i>
       </a>
-
-      <a href="https://aniruddhawrites.medium.com/" target="_blank" rel="noopener">
-        Medium
+      <a href="https://github.com/aniruddhawrites" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2 mr-2" style="width: 36px; height: 36px; padding: 6px 0;">
+        <i class="fab fa-github"></i>
       </a>
-
-      <a href="https://x.com/ruddhani" target="_blank" rel="noopener">
-        X
+      <a href="https://linkedin.com/in/ruddhani/" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2" style="width: 36px; height: 36px; padding: 6px 0;">
+        <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
 
   </div>
 
-</div>
-
----
-
-## About Aniruddha Writes
+  <!-- ABOUT DETAILS CARD -->
+  <div class="card border-0 shadow-sm p-4 p-md-5 bg-white" style="border-radius: 12px;">
+    ## About Aniruddha Writes
 
 **Aniruddha Writes** is my independent technology writing platform.
 
@@ -251,3 +253,6 @@ If you'd like to discuss an article, technical writing project, collaboration, o
 > **Aniruddha Writes**
 >
 > *Complex technology. Clear thinking. Practical insight.*
+  </div>
+
+</div>
