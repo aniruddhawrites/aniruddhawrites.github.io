@@ -4,324 +4,467 @@ title: "About Aniruddha"
 subtitle: "Enterprise Technology. Explained Clearly."
 permalink: /aboutme/
 ---
+ <!-- HERO -->
+  <section class="py-5 border-bottom">
 
-  <!-- PROFILE HEADER CARD (DARK BACKGROUND) -->
-  <div class="card border-0 shadow-sm text-white text-center p-4 p-md-5 mb-4" style="background-color: #0f172a; border-radius: 12px;">
-    
-    <!-- PROFILE AVATAR WITH OVERLAY RING -->
-    <div class="mx-auto mb-3" style="width: 120px; height: 120px;">
-      <img 
-        src="/assets/img/aniruddha-banerjee.png"
-         alt="Aniruddha Banerjee"
-         loading="eager"
-        class="rounded-circle shadow" 
-        style="width: 120px; height: 120px; object-fit: cover; border: 4px solid #ffffff;"
-      >
-    </div>
+    <div class="container">
 
-    <!-- NAME & USERNAME -->
-    <h1 class="h2 font-weight-bold mb-1 text-white">Aniruddha Banerjee</h1>
-    <p class="text-muted-custom small mb-3" style="color: #94a3b8;">
-      Enterprise Data &amp; <i class="fas fa-map-marker-alt mr-1"></i>Technology Architect
-    </p>
+      <div class="row align-items-center py-lg-5">
 
-    <!-- TAGLINE -->
-    <p class="lead mb-4 mx-auto text-light opacity-90" style="max-width: 680px; font-size: 1.05rem;">
-      Technical Writer · Data · AI · Cloud · Architecture
-    </p>
+        <!-- Profile -->
+        <div class="col-lg-4 text-center mb-5 mb-lg-0">
 
-    <!-- TAGLINE -->
-    <p class="lead mb-4 mx-auto text-light opacity-90" style="max-width: 680px; font-size: 1.05rem;">
-      I write about the engineering decisions, architectural trade-offs,
-      and failure patterns behind complex enterprise technology systems.
-    </p>
+          <img src="/assets/img/aniruddha-banerjee.png"
+               class="img-fluid rounded-circle border shadow-lg"
+               width="280"
+               height="280"
+               alt="Aniruddha Banerjee">
 
-    <!-- ACTIONS & SOCIAL LINKS -->
-    <div class="d-flex justify-content-center align-items-center flex-wrap gap-2">
-      <a href="https://aniruddhawrites.hashnode.dev/" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-pill font-weight-bold px-3 mr-2 mb-2">
-        <i class="fas fa-share-alt mr-1"></i> Share Profile
-      </a>
-      <a href="https://x.com/ruddhani" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2 mr-2" style="width: 36px; height: 36px; padding: 6px 0;">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://github.com/aniruddhawrites" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2 mr-2" style="width: 36px; height: 36px; padding: 6px 0;">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/ruddhani/" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm rounded-circle mb-2" style="width: 36px; height: 36px; padding: 6px 0;">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
-
-  </div>
-
-  <!-- ABOUT DETAILS CARD -->
-  <div class="card border-0 shadow-sm p-4 p-md-5 bg-white" style="border-radius: 12px;">
-    <div class="preview__inner-2" style="padding: 10px 25px 333px;"><div class="cl-preview-section"><h2 id="about-aniruddha-writes">About Aniruddha Writes</h2>
-    </div><div class="cl-preview-section"><p><strong>Aniruddha Writes</strong> is my independent technology writing platform.</p>
-    </div><div class="cl-preview-section"><p>I have 18+ years of experience working across enterprise data, analytics, cloud platforms, architecture, performance engineering, and technology delivery.</p>
-    </div><div class="cl-preview-section"><p>I created this site to explore the engineering problems that are often hidden behind successful-looking technology platforms.</p>
-    </div><div class="cl-preview-section"><p>Not just:</p>
-    </div><div class="cl-preview-section"><blockquote>
-    <p><em>How does this technology work?</em></p>
-    </blockquote>
-    </div><div class="cl-preview-section"><p>But:</p>
-    </div><div class="cl-preview-section"><blockquote>
-    <p><strong>Why was this architecture chosen?</strong></p>
-    </blockquote>
-    </div><div class="cl-preview-section"><blockquote>
-    <p><strong>What assumptions were made?</strong></p>
-    </blockquote>
-    </div><div class="cl-preview-section"><blockquote>
-    <p><strong>What happens when those assumptions stop being true?</strong></p>
-    </blockquote>
-    </div><div class="cl-preview-section"><blockquote>
-    <p><strong>And what can we learn from the failure?</strong></p>
-    </blockquote>
-    </div><div class="cl-preview-section"><p>That’s the perspective behind the writing published here.</p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h2 id="what-i-write-about">What I Write About</h2>
-    </div><div class="cl-preview-section"><h3 id="enterprise-data--analytics">Enterprise Data &amp; Analytics</h3>
-    </div><div class="cl-preview-section"><ul>
-    <li>
-    <p>Microsoft Fabric</p>
-    </li>
-    <li>
-    <p>Power BI</p>
-    </li>
-    <li>
-    <p>Databricks</p>
-    </li>
-    <li>
-    <p>Amazon Redshift</p>
-    </li>
-    <li>
-    <p>Data engineering</p>
-    </li>
-    <li>
-    <p>Data modelling</p>
-    </li>
-    <li>
-    <p>Performance engineering</p>
-    </li>
-    <li>
-    <p>Analytics architecture</p>
-    </li>
-    <li>
-    <p>Enterprise data platforms</p>
-    </li>
-    </ul>
-    </div><div class="cl-preview-section"><h3 id="cloud--architecture">Cloud &amp; Architecture</h3>
-    </div><div class="cl-preview-section"><ul>
-    <li>
-    <p>AWS</p>
-    </li>
-    <li>
-    <p>Azure</p>
-    </li>
-    <li>
-    <p>Cloud data platforms</p>
-    </li>
-    <li>
-    <p>Distributed systems</p>
-    </li>
-    <li>
-    <p>Enterprise integration</p>
-    </li>
-    <li>
-    <p>Platform engineering</p>
-    </li>
-    <li>
-    <p>Architecture trade-offs</p>
-    </li>
-    <li>
-    <p>Performance and scalability</p>
-    </li>
-    </ul>
-    </div><div class="cl-preview-section"><h3 id="ai--emerging-technology">AI &amp; Emerging Technology</h3>
-    </div><div class="cl-preview-section"><ul>
-    <li>
-    <p>Generative AI</p>
-    </li>
-    <li>
-    <p>AI-enabled data platforms</p>
-    </li>
-    <li>
-    <p>RAG and enterprise AI</p>
-    </li>
-    <li>
-    <p>AI architecture</p>
-    </li>
-    <li>
-    <p>Automation</p>
-    </li>
-    <li>
-    <p>AI adoption</p>
-    </li>
-    <li>
-    <p>The organisational impact of AI</p>
-    </li>
-    </ul>
-    </div><div class="cl-preview-section"><h3 id="technology--society">Technology &amp; Society</h3>
-    </div><div class="cl-preview-section"><p>Technology doesn’t exist in isolation.</p>
-    </div><div class="cl-preview-section"><p>I also write about the broader relationship between technology and society — including digital public infrastructure, technology adoption, capability building, and the responsibilities that come with increasingly powerful technology.</p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h2 id="how-i-approach-technical-writing">How I Approach Technical Writing</h2>
-    </div><div class="cl-preview-section"><p>I don’t believe good technical writing is simply documentation with better grammar.</p>
-    </div><div class="cl-preview-section"><p>The strongest technical stories start with a real problem.</p>
-    </div><div class="cl-preview-section"><p>Why did the system fail?</p>
-    </div><div class="cl-preview-section"><p>Why did an apparently correct architectural decision create an unexpected bottleneck?</p>
-    </div><div class="cl-preview-section"><p>Which assumption turned out to be wrong?</p>
-    </div><div class="cl-preview-section"><p>What trade-off did the engineering team make?</p>
-    </div><div class="cl-preview-section"><p>What happened when the system encountered real-world scale?</p>
-    </div><div class="cl-preview-section"><p>And most importantly:</p>
-    </div><div class="cl-preview-section"><p><strong>What can another engineer, architect, or technology leader learn from it?</strong></p>
-    </div><div class="cl-preview-section"><p>My goal is to turn complex technical subjects into content that is:</p>
-    </div><div class="cl-preview-section"><ul>
-    <li>
-    <p>technically credible</p>
-    </li>
-    <li>
-    <p>practically useful</p>
-    </li>
-    <li>
-    <p>understandable without unnecessary jargon</p>
-    </li>
-    <li>
-    <p>grounded in real engineering problems</p>
-    </li>
-    <li>
-    <p>interesting enough to keep reading</p>
-    </li>
-    </ul>
-    </div><div class="cl-preview-section"><hr>
-    </div>
-    <div class="cl-preview-section"><h2 id="selected-writing">Selected Writing</h2>
-    </div><div class="cl-preview-section"><h3 id="when-data-becomes-the-bottleneck">When Data Becomes the Bottleneck</h3>
-    </div>
-    <div class="row">
-      <div class="col col-lg-3 col-md-2 col-sm-1">
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">When Data Becomes the Bottleneck</h5>
-            <p class="card-text">An investigation into how concurrency, cross-region latency, capacity constraints, and gateway behaviour combined to create enterprise analytics SLT failures.</p>
-            <a href="/2026-05-13-when-data-becomes-bottleneck-unmasking-real-culprit-behind/" class="btn btn-primary">Read the article →</a>
-          </div>
         </div>
-      </div>
-      <div class="col col-lg-3 col-md-2 col-sm-1">
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">The DISTKEY That Was Right, and Still Wrong</h5>
-            <p class="card-text">A Redshift investigation into how a locally correct physical-design decision created problems for downstream consumers.</p>
-            <a href="/2026-08-06-root-cause-beyond-the-dashboard/" class="btn btn-primary">Read the article →</a>
-          </div>
-        </div>
-      </div>
-      <div class="col col-lg-3 col-md-2 col-sm-1">
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">The Post-Acquisition Assumption Gap</h5>
-            <p class="card-text">How inherited assumptions around CDC, SCD, provenance, and governance can survive long after systems have been technically integrated.</p>
-            <a href="/2026-07-18-the-post-acquisition-assumption-gap/" class="btn btn-primary">Read the article →</a>
-          </div>
-        </div>
-      </div>
-      <div class="col col-lg-3 col-md-2 col-sm-1">
-        <div class="card">
-          <div class="card-header">
-            Featured
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Independence Is Not an Event. It Is a Capability.</h5>
-            <p class="card-text">A reflection on India’s journey from political independence to institutional and digital capability — and what the AI era may demand next.</p>
-            <a href="/2026-08-15-independence-is-not-an-event-it-is-a-capability/" class="btn btn-primary">Read the article →</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="cl-preview-section"><h2 id="for-organizations--publications">For Organizations &amp; Publications</h2>
-    </div><div class="cl-preview-section"><p>I am interested in working with organizations, publications, and technology teams that need complex technical subjects turned into clear, credible content.</p>
-    </div><div class="cl-preview-section"><p>Potential areas include:</p>
-    </div><div class="cl-preview-section"><ul>
-    <li>
-    <p>Technical thought-leadership articles</p>
-    </li>
-    <li>
-    <p>Enterprise technology case studies</p>
-    </li>
-    <li>
-    <p>Engineering investigations</p>
-    </li>
-    <li>
-    <p>Architecture explainers</p>
-    </li>
-    <li>
-    <p>Data and AI articles</p>
-    </li>
-    <li>
-    <p>Technical blogs</p>
-    </li>
-    <li>
-    <p>White-paper style content</p>
-    </li>
-    <li>
-    <p>Technology research and analysis</p>
-    </li>
-    </ul>
-    </div><div class="cl-preview-section"><p>The strongest fit is content where <strong>technical understanding and clear storytelling both matter</strong>.</p>
-    </div><div class="cl-preview-section"><p>If your subject is technically complex but your audience shouldn’t need to be an engineer to understand it, that’s where I can help.</p>
-    </div><div class="cl-preview-section"><h3 id="work-with-me">Work With Me</h3>
-    </div><div class="cl-preview-section"><p>If you’d like to discuss a technical writing project, article, research assignment, or collaboration:</p>
-    </div><div class="cl-preview-section"><p><strong><a href="https://www.linkedin.com/in/ruddhani/">Connect with me on LinkedIn →</a></strong></p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h2 id="beyond-the-articles">Beyond the Articles</h2>
-    </div><div class="cl-preview-section"><p>The writing here is supported by hands-on work across enterprise technology platforms.</p>
-    </div><div class="cl-preview-section"><p>My interests include:</p>
-    </div><div class="cl-preview-section"><p><strong>Data Platforms</strong></p>
-    </div><div class="cl-preview-section"><p>Microsoft Fabric · Power BI · Databricks · Amazon Redshift</p>
-    </div><div class="cl-preview-section"><p><strong>Cloud</strong></p>
-    </div><div class="cl-preview-section"><p>AWS · Azure · Cloud Architecture</p>
-    </div><div class="cl-preview-section"><p><strong>Engineering</strong></p>
-    </div><div class="cl-preview-section"><p>Data Engineering · Performance Engineering · Data Modelling · Analytics</p>
-    </div><div class="cl-preview-section"><p><strong>AI</strong></p>
-    </div><div class="cl-preview-section"><p>Generative AI · RAG · AI Architecture · Automation</p>
-    </div><div class="cl-preview-section"><p><strong>Technology Leadership</strong></p>
-    </div><div class="cl-preview-section"><p>Architecture · Delivery · Platform Strategy · Technical Problem Solving</p>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><h2 id="connect">Connect</h2>
-    </div><div class="cl-preview-section"><p>If you’d like to discuss an article, technical writing project, collaboration, or research topic:</p>
-    </div><div class="cl-preview-section"><ul>
-    <li>
-    <p><a href="https://www.linkedin.com/in/ruddhani/">LinkedIn</a></p>
-    </li>
-    <li>
-    <p><a href="https://github.com/ruddhanib">GitHub</a></p>
-    </li>
-    <li>
-    <p><a href="https://ruddhani.medium.com/">Medium</a></p>
-    </li>
-    <li>
-    <p><a href="https://x.com/ruddhani">X</a></p>
-    </li>
-    </ul>
-    </div><div class="cl-preview-section"><hr>
-    </div><div class="cl-preview-section"><blockquote>
-    <p><strong>Aniruddha Writes</strong></p>
-    </blockquote>
-    </div><div class="cl-preview-section"><blockquote></blockquote>
-    </div><div class="cl-preview-section"><blockquote>
-    <p><em>Complex technology. Clear thinking. Practical insight.</em></p>
-    </blockquote>
-    </div></div>
-  </div>
 
-</div>
+
+        <!-- Introduction -->
+        <div class="col-lg-8 text-center text-lg-left">
+
+          <p class="lead mb-0">
+            Hi, I'm
+          </p>
+
+          <h1 class="display-3 font-weight-bold">
+            Aniruddha 👋
+          </h1>
+
+          <h2 class="display-4 font-weight-bold text-info">
+            Data. Cloud. AI.
+          </h2>
+
+          <h2 class="display-4 font-weight-bold text-info mb-4">
+            Practical Engineering.
+          </h2>
+
+          <p class="lead text-light mb-4">
+            Associate Consultant with 18+ years of experience
+            in Data Engineering, Analytics, Cloud Architecture
+            and Modern Data Platforms.
+          </p>
+
+          <a href="/"
+             class="btn btn-primary btn-lg mr-2 mb-2">
+            <i class="fas fa-book-open mr-2"></i>
+            Explore Articles
+          </a>
+
+          <a href="#connect"
+             class="btn btn-outline-light btn-lg mb-2">
+            <i class="far fa-user mr-2"></i>
+            Connect With Me
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="py-5">
+
+    <div class="container">
+
+      <div class="text-center mb-5">
+
+        <h2 class="font-weight-bold">
+          <i class="far fa-user text-info mr-2"></i>
+          ABOUT ME
+        </h2>
+
+        <hr class="bg-secondary">
+
+      </div>
+
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-9 text-center">
+
+          <p class="lead text-light">
+            I help businesses and teams design, build and
+            optimize modern data solutions using cloud,
+            analytics and AI technologies.
+          </p>
+
+          <p class="lead text-muted">
+            I write about real-world experiences, architectures
+            and practical tutorials that make complex topics simple.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT I WRITE ABOUT -->
+  <section class="py-5 bg-secondary">
+
+    <div class="container">
+
+      <h2 class="text-center font-weight-bold mb-5">
+        <i class="far fa-edit text-info mr-2"></i>
+        WHAT I WRITE ABOUT
+      </h2>
+
+
+      <div class="row">
+
+        <!-- CARD 1 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="card bg-dark text-white border h-100 shadow">
+
+            <div class="card-body text-center p-4">
+
+              <i class="fas fa-database
+                        fa-3x
+                        text-info
+                        mb-4"></i>
+
+              <h4 class="font-weight-bold">
+                Data Engineering
+              </h4>
+
+              <p class="text-muted mb-0">
+                Pipelines, ETL/ELT, Data Modeling,
+                Apache Airflow, AWS Glue and
+                modern data platforms.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="card bg-dark text-white border h-100 shadow">
+
+            <div class="card-body text-center p-4">
+
+              <i class="fas fa-cloud
+                        fa-3x
+                        text-primary
+                        mb-4"></i>
+
+              <h4 class="font-weight-bold">
+                Cloud Architecture
+              </h4>
+
+              <p class="text-muted mb-0">
+                Azure, AWS, scalable architectures
+                and solution design.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="card bg-dark text-white border h-100 shadow">
+
+            <div class="card-body text-center p-4">
+
+              <i class="fas fa-brain
+                        fa-3x
+                        text-warning
+                        mb-4"></i>
+
+              <h4 class="font-weight-bold">
+                AI & Automation
+              </h4>
+
+              <p class="text-muted mb-0">
+                Practical AI tools, automation
+                workflows and intelligent solutions.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="col-lg-3 col-md-6 mb-4">
+
+          <div class="card bg-dark text-white border h-100 shadow">
+
+            <div class="card-body text-center p-4">
+
+              <i class="fas fa-chart-bar
+                        fa-3x
+                        text-success
+                        mb-4"></i>
+
+              <h4 class="font-weight-bold">
+                Microsoft Data Stack
+              </h4>
+
+              <p class="text-muted mb-0">
+                Microsoft Fabric, Power BI,
+                Databricks and enterprise analytics.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- JOURNEY -->
+  <section class="py-5">
+
+    <div class="container">
+
+      <h2 class="text-center font-weight-bold mb-5">
+
+        <i class="fas fa-rocket text-info mr-2"></i>
+
+        MY JOURNEY
+
+      </h2>
+
+
+      <div class="row text-center">
+
+        <div class="col-md mb-4">
+
+          <div class="border rounded-circle d-inline-flex
+                      align-items-center justify-content-center
+                      mb-3"
+               style="width:60px;height:60px;">
+
+            <i class="fas fa-circle text-info"></i>
+
+          </div>
+
+          <h4 class="text-info">2008</h4>
+
+          <p class="text-muted">
+            Started my journey in enterprise technology.
+          </p>
+
+        </div>
+
+
+        <div class="col-md mb-4">
+
+          <div class="border rounded-circle p-3 mb-3 d-inline-block">
+            <i class="fas fa-circle text-info"></i>
+          </div>
+
+          <h4 class="text-info">2014</h4>
+
+          <p class="text-muted">
+            Deepened focus on data and analytics.
+          </p>
+
+        </div>
+
+
+        <div class="col-md mb-4">
+
+          <div class="border rounded-circle p-3 mb-3 d-inline-block">
+            <i class="fas fa-circle text-info"></i>
+          </div>
+
+          <h4 class="text-info">2020</h4>
+
+          <p class="text-muted">
+            Embraced cloud platforms and modern data architecture.
+          </p>
+
+        </div>
+
+
+        <div class="col-md mb-4">
+
+          <div class="border rounded-circle p-3 mb-3 d-inline-block">
+            <i class="fas fa-circle text-info"></i>
+          </div>
+
+          <h4 class="text-info">2024</h4>
+
+          <p class="text-muted">
+            Exploring AI, automation and Microsoft Fabric.
+          </p>
+
+        </div>
+
+
+        <div class="col-md mb-4">
+
+          <div class="border rounded-circle p-3 mb-3 d-inline-block">
+            <i class="fas fa-circle text-info"></i>
+          </div>
+
+          <h4 class="text-info">2026</h4>
+
+          <p class="text-muted">
+            Sharing knowledge through Aniruddha Writes.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PHILOSOPHY -->
+  <section class="py-5">
+
+    <div class="container">
+
+      <div class="card bg-secondary border shadow-lg">
+
+        <div class="card-body p-4 p-lg-5">
+
+          <div class="row align-items-center">
+
+            <div class="col-lg-2 text-center mb-4 mb-lg-0">
+
+              <i class="fas fa-quote-left
+                        fa-4x
+                        text-primary"></i>
+
+            </div>
+
+
+            <div class="col-lg-8">
+
+              <h5 class="text-info font-weight-bold">
+                MY PHILOSOPHY
+              </h5>
+
+              <h2 class="font-weight-bold">
+                Complex technology doesn't have to be complicated.
+              </h2>
+
+              <p class="lead text-muted mb-0">
+
+                I believe the best technical content should be
+                accurate enough for professionals and simple enough
+                for learners.
+
+              </p>
+
+            </div>
+
+
+            <div class="col-lg-2 text-center mt-4 mt-lg-0">
+
+              <i class="fas fa-laptop-code
+                        fa-4x
+                        text-info"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONNECT -->
+  <section id="connect"
+           class="py-5 text-center bg-secondary">
+
+    <div class="container">
+
+      <h2 class="font-weight-bold">
+        <i class="fas fa-users text-info mr-2"></i>
+        LET'S CONNECT
+      </h2>
+
+      <p class="lead text-light mb-4">
+
+        Have a question, idea, or interesting engineering problem?
+        Let's connect.
+
+      </p>
+
+
+      <div class="d-flex
+                  flex-wrap
+                  justify-content-center">
+
+        <a href="#"
+           class="btn btn-outline-light m-2">
+          <i class="far fa-envelope mr-2"></i>
+          Email
+        </a>
+
+        <a href="#"
+           class="btn btn-outline-primary m-2">
+          <i class="fab fa-linkedin mr-2"></i>
+          LinkedIn
+        </a>
+
+        <a href="#"
+           class="btn btn-outline-light m-2">
+          <i class="fab fa-github mr-2"></i>
+          GitHub
+        </a>
+
+        <a href="#"
+           class="btn btn-outline-light m-2">
+          <i class="fab fa-medium mr-2"></i>
+          Medium
+        </a>
+
+        <a href="#"
+           class="btn btn-outline-primary m-2">
+          <i class="fab fa-facebook mr-2"></i>
+          Facebook
+        </a>
+
+        <a href="#"
+           class="btn btn-outline-light m-2">
+          <i class="fas fa-rss mr-2"></i>
+          RSS
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
