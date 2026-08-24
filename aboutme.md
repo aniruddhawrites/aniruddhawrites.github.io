@@ -48,7 +48,7 @@ permalink: /aboutme/
             and Modern Data Platforms.
           </p>
 
-          <a href="/"
+          <a href="/blog"
              class="btn btn-primary btn-lg mr-2 mb-2">
             <i class="fas fa-book-open mr-2"></i>
             Explore Articles
@@ -269,7 +269,7 @@ permalink: /aboutme/
 
           </div>
 
-          <h4 class="text-info">2008</h4>
+          <h4 class="text-info">2007</h4>
 
           <p class="text-muted">
             Started my journey in enterprise technology.
@@ -284,7 +284,7 @@ permalink: /aboutme/
             <i class="fas fa-circle text-info"></i>
           </div>
 
-          <h4 class="text-info">2014</h4>
+          <h4 class="text-info">2011</h4>
 
           <p class="text-muted">
             Deepened focus on data and analytics.
@@ -427,40 +427,40 @@ permalink: /aboutme/
                   flex-wrap
                   justify-content-center">
 
-        <a href="#"
+        <a href="mailto:say2ruddhani@gmail.com"
            class="btn btn-outline-light m-2">
           <i class="far fa-envelope mr-2"></i>
           Email
         </a>
 
-        <a href="#"
+        <a href="https://www.linkedin.com/in/ruddhani/"
            class="btn btn-outline-primary m-2">
           <i class="fab fa-linkedin mr-2"></i>
           LinkedIn
         </a>
 
-        <a href="#"
+        <a href="https://github.com/ruddhani"
            class="btn btn-outline-light m-2">
           <i class="fab fa-github mr-2"></i>
           GitHub
         </a>
 
-        <a href="#"
+        <a href="https://aniruddhawrites.medium.com/"
            class="btn btn-outline-light m-2">
           <i class="fab fa-medium mr-2"></i>
           Medium
         </a>
 
-        <a href="#"
+        <a href="https://www.facebook.com/aniruddhawrites"
            class="btn btn-outline-primary m-2">
           <i class="fab fa-facebook mr-2"></i>
           Facebook
         </a>
 
-        <a href="#"
+        <a href="https://x.com/ruddhani"
            class="btn btn-outline-light m-2">
           <i class="fas fa-rss mr-2"></i>
-          RSS
+          X
         </a>
 
       </div>
