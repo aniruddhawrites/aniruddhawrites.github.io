@@ -48,6 +48,13 @@ The presenting symptom was simple: dashboard queries against recent event data w
 
 That combination — a healthy write path and a degrading read path over the *same* data — is the signature of a physical layout problem, not a capacity problem. If the cluster were simply undersized, you'd expect both ingestion and query performance to degrade together as volume grew, or you'd expect the problem to be fixable by scaling compute. Here, scaling compute produced only marginal improvement, which is itself a diagnostic clue worth taking seriously: throwing more compute at a query engine doesn't reduce the number of small objects it has to enumerate, open, and parse before it reaches useful data. It just processes the overhead in parallel, faster, up to a point.
 
+### From Fast Ingestion to Slow Analytics
+
+![From Fast Ingestion to Slow Analytics](https://aniruddhawrites.github.io/assets/img/from-fast-ingestion-to-slow-analytics.png align="center")
+
+> * From Fast Ingestion to Slow Analytics
+ 
+
 ---
 
 ### 3. The Investigation
@@ -71,6 +78,12 @@ This separation matters because file-count reduction and query-latency reduction
 ### 4. Root Cause #1: The Small-File Explosion
 
 Small files, on their own, aren't the problem. A single 10 KB file is nothing. The problem is what accumulates when a streaming pipeline optimized for write latency runs continuously against the same landing zone for hours and days without any downstream consolidation step.
+
+### The Small-File Tax
+
+![The Small-File Tax](https://aniruddhawrites.github.io/assets/img/The-Small-File-Tax.png align="center")
+
+> * The Small-File Tax 
 
 It's worth being precise about *why* a large number of small objects is expensive for an analytical engine, because "more files means more requests, therefore slow" is an oversimplification that doesn't hold up to scrutiny and, more importantly, isn't necessary to make the argument. The actual mechanism has several contributing layers:
 
@@ -112,6 +125,12 @@ This is a genuinely different problem from "what format should the files be" or 
 The fix is not "adopt Iceberg" as a single action. It's the deliberate combination of three things that each solve a different part of the problem described above:
 
 **Apache Iceberg** provides the table abstraction — the metadata layer that tracks table state, snapshots, and schema, and that makes atomic, consistent rewrites of the underlying files possible.
+
+### How Iceberg Tracks the Physical Table
+
+![How Iceberg Tracks the Physical Table](https://aniruddhawrites.github.io/assets/img/How-Iceberg-tracks-the-Physical-Table.png align="center")
+
+> * How Iceberg Tracks the Physical Table 
 
 **Parquet** provides the physical file format — columnar storage, efficient compression, and embedded statistics that a query planner can use.
 
@@ -168,6 +187,12 @@ New Table Snapshot
 The job reads a set of existing small files, rewrites their combined contents into a smaller number of larger Parquet files, and commits that rewrite as a new Iceberg snapshot. The old files aren't deleted the instant the new ones are written — they remain part of prior snapshots until retention and expiration policies clean them up, which is deliberate: it's what allows time-travel queries and safe rollback if something in the rewrite went wrong.
 
 Compaction is recurring, not one-time, because ingestion doesn't stop. A landing zone under continuous write load will keep accumulating small files after every compaction run, which raises an operational question that's easy to get wrong: how often should compaction actually run?
+
+### How Compaction Changes the Physical Layout
+
+![How Compaction Changes the Physical Layout](https://aniruddhawrites.github.io/assets/img/How-Compaction-Changes-the-Physical-Layout.png align="center")
+
+> * How Compaction Changes the Physical Layout 
 
 "Run it daily" is not a universal answer, and treating it as one is one of the more common mistakes in production deployments of this pattern. The right cadence depends on the rate of file accumulation, the query workload's freshness requirements, the cost of running the compaction job itself, and how partitions are behaving under load. A workload accumulating files faster than a daily job can absorb needs more frequent, threshold-based triggering — compact when a partition crosses a file-count or fragmentation threshold, not on a fixed calendar regardless of actual need. A workload with a healthy, slowly-growing partition doesn't need the compute cost of a daily rewrite it doesn't yet require. AWS's guidance on Iceberg optimization on AWS specifically frames compaction as an ongoing maintenance operation to be tuned to the workload, not a one-time fix or a fixed-schedule chore. [Apache Iceberg optimization: Solving the small files problem in Amazon EMR, AWS Big Data Blog]
 
@@ -231,6 +256,12 @@ Amazon Redshift Spectrum
 | Data freshness | Immediate | Slightly delayed, dependent on compaction cadence |
 
 Ingestion behavior is unchanged in this picture — that's deliberate. The applications still write the way they were always going to write. What changed is entirely downstream, in how that data is subsequently organized for the workload that consumes it.
+
+### Same Data. Different Physical Layout.
+
+![Same Data. Different Physical Layout.](https://aniruddhawrites.github.io/assets/img/Same-Data-Different-Physical-Layout.png align="center")
+
+> * Same Data. Different Physical Layout. 
 
 ---
 
