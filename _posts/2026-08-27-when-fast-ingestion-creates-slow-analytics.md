@@ -15,6 +15,11 @@ tags: [Amazon Redshift, Redshift Spectrum, Amazon S3, Apache Iceberg, Parquet, D
 *A reference architecture case study*
 
 ---
+## Author's note
+
+> This is a reference architecture, not a specific customer case study. Workload characteristics and file sizes are illustrative; performance claims should be validated through controlled benchmarking. The article deliberately separates the roles of Iceberg, Parquet, and compaction rather than treating Iceberg as a universal performance solution.
+
+---
 
 ### The Pipeline Was Fast. The Queries Were Slow.
 
@@ -243,17 +248,11 @@ Fewer, larger Parquet files, committed as new snapshots
      ↓
 Amazon Redshift Spectrum
 ```
-
-| Aspect | Before | After |
-|---|---|---|
-| File format | JSON | Parquet |
-| Average file size | ~10 KB (illustrative) | 64 MB–128 MB (illustrative target range) |
-| File count | Very high | Substantially lower |
-| Metadata planning | Directory-level object listing | Iceberg snapshots and manifests |
-| Optimizer statistics | Minimal | Glue-generated Iceberg statistics |
-| Scan efficiency | Low — full-record parsing | Higher — columnar, prunable |
-| Compression | Weak, text-based | Strong, columnar-aware |
-| Data freshness | Immediate | Slightly delayed, dependent on compaction cadence |
+| Aspect          | Before          | After                |
+| --------------- | --------------- | -------------------- |
+| Compression     | Text-oriented   | Columnar compression |
+| Scan efficiency | Lower           | Higher               |
+| Column access   | Record-oriented | Columnar             |
 
 Ingestion behavior is unchanged in this picture — that's deliberate. The applications still write the way they were always going to write. What changed is entirely downstream, in how that data is subsequently organized for the workload that consumes it.
 
@@ -394,10 +393,14 @@ Design the way data arrives for ingestion. Design the way data is stored for ana
 
 ---
 
-## Author's note
+## About the Author
 
-> This is a reference architecture, not a specific customer case study. Workload characteristics and file sizes are illustrative; performance claims should be validated through controlled benchmarking. The article deliberately separates the roles of Iceberg, Parquet, and compaction rather than treating Iceberg as a universal performance solution.
+**Aniruddha Banerjee** is a Data Platform Architect, BI and Analytics leader, and technology writer with nearly two decades of experience delivering enterprise data and analytics solutions across global organizations.
 
----
+His writing explores the intersection of data, AI, digital transformation, architecture, and technology leadership.
+
+Through **Aniruddha Writes**, he shares practical insights, long-form essays, and reflections on how technology shapes organizations, industries, and society.
+
+[LinkedIn](https://www.linkedin.com/in/ruddhani/) · [GitHub](https://github.com/aniruddhawrites) · [Medium](https://aniruddhawrites.medium.com/)
 
 #DataEngineering #AWS #ApacheIceberg #AmazonS3 #RedshiftSpectrum #DataArchitecture
