@@ -6,7 +6,7 @@ subtitle: "Why can a fast streaming pipeline create slow analytics? Explore the 
 cover-img: /assets/img/architecture-diagram.png
 thumbnail-img: /assets/img/architecture-diagram.png
 share-img: /assets/img/architecture-diagram.png
-tags: [Amazon Redshift, Data Engineering, Data Architecture, Performance Engineering, Data Platform, Apache Iceberg, Amazon S3, Parquet, AWS Glue, Redshift Spectrum]
+tags: [Amazon Redshift, Redshift Spectrum, Amazon S3, Apache Iceberg, Parquet, Data Engineering, Data Architecture, Performance Engineering]
 ---
 
 # When Fast Ingestion Creates Slow Analytics
