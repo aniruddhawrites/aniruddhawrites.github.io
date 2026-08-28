@@ -128,7 +128,7 @@ The fix is not "adopt Iceberg" as a single action. It's the deliberate combinati
 
 **Apache Iceberg** provides the table abstraction — the metadata layer that tracks table state, snapshots, and schema, and that makes atomic, consistent rewrites of the underlying files possible.
 
-![How Iceberg Tracks the Physical Table](https://aniruddhawrites.github.io/assets/img/How-Iceberg-tracks-the-Physical-Table.png align="center")
+![How Iceberg Tracks the Physical Table](https://aniruddhawrites.github.io/assets/img/How-Iceberg-tracks-the-Physical-Table.png)
 
 > * How Iceberg Tracks the Physical Table 
 
@@ -188,7 +188,7 @@ The job reads a set of existing small files, rewrites their combined contents in
 
 Compaction is recurring, not one-time, because ingestion doesn't stop. A landing zone under continuous write load will keep accumulating small files after every compaction run, which raises an operational question that's easy to get wrong: how often should compaction actually run?
 
-![How Compaction Changes the Physical Layout](https://aniruddhawrites.github.io/assets/img/How-Compaction-Changes-the-Physical-Layout.png align="center")
+![How Compaction Changes the Physical Layout](https://aniruddhawrites.github.io/assets/img/How-Compaction-Changes-the-Physical-Layout.png)
 
 > * Snapshots preserve history for rollbacks
 
@@ -250,7 +250,7 @@ Amazon Redshift Spectrum
 Ingestion behavior is unchanged in this picture — that's deliberate. The applications still write the way they were always going to write. What changed is entirely downstream, in how that data is subsequently organized for the workload that consumes it.
 
 
-![Same Data. Different Physical Layout.](https://aniruddhawrites.github.io/assets/img/Same-Data-Different-Physical-Layout.png align="center")
+![Same Data. Different Physical Layout.](https://aniruddhawrites.github.io/assets/img/Same-Data-Different-Physical-Layout.png)
 
 > * Ingestion remains unchanged; optimization happens downstream
 
