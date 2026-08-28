@@ -14,8 +14,30 @@ tags: [Amazon Redshift, Redshift Spectrum, Amazon S3, Apache Iceberg, Parquet, D
 > Solving the S3 Small-File Problem with Apache Iceberg, Compaction, and Amazon Redshift Spectrum
 >
 > *A reference architecture case study*
+> The pipeline was fast. The queries were slow.
+> 
+> A streaming system can be perfectly healthy—low-latency writes, continuous ingestion, durable storage—and still create a physical data layout that is hostile to analytical workloads.
+>
+> The problem isn't necessarily the volume of data.
+
+Sometimes it's the shape of the data.
 
 ---
+
+## What This Article Is Not
+
+This isn't an argument that every S3 data lake should use Apache Iceberg.
+
+It isn't a claim that 128 MB is the universally correct file size.
+
+It isn't a guarantee that compaction produces a specific percentage improvement.
+
+And it isn't a claim that S3 performs poorly when a bucket contains many objects.
+
+The problem is the interaction between file granularity, physical format, metadata management, partitioning, and the analytical workload consuming the data.
+
+---
+
 ## Author's note
 
 > This is a reference architecture, not a specific customer case study. Workload characteristics and file sizes are illustrative; performance claims should be validated through controlled benchmarking. The article deliberately separates the roles of Iceberg, Parquet, and compaction rather than treating Iceberg as a universal performance solution.
@@ -135,6 +157,16 @@ The fix is not "adopt Iceberg" as a single action. It's the deliberate combinati
 **Parquet** provides the physical file format — columnar storage, efficient compression, and embedded statistics that a query planner can use.
 
 **Compaction**, run as a Spark job on AWS Glue or Amazon EMR, is the process that actually rewrites many small files into fewer, larger ones and commits the result through Iceberg.
+
+┌───────────────────────────────────────────────┐
+│              THREE DIFFERENT ROLES            │
+├───────────────────────────────────────────────┤
+│                                               │
+│  Parquet       →  Physical file format       │
+│  Compaction    →  Physical layout operation  │
+│  Iceberg       →  Table + metadata layer     │
+│                                               │
+└───────────────────────────────────────────────┘
 
 These are three separable technologies performing three separable jobs. Iceberg is not a file format — it doesn't itself make files larger, smaller, columnar, or compressed. Parquet is not a table format — it has no concept of snapshots, schema evolution, or atomic multi-file commits on its own. Compaction is not free, automatic, or something either Iceberg or Parquet does by itself — it's compute work that has to be scheduled, run, and paid for. Keeping these boundaries distinct is what separates an accurate explanation of this fix from a marketing summary of it.
 
@@ -373,6 +405,8 @@ The problem this article describes was never really that the data lake contained
 The fix is not "use Iceberg." It's the deliberate combination of appropriate ingestion behavior, an appropriate physical file format, sensible file sizing tuned to the actual workload, a compaction process that runs on a cadence matched to real accumulation and freshness needs, and a metadata-aware table management layer introduced when — and only when — the dataset's lifecycle actually justifies it.
 
 Design the way data arrives for ingestion. Design the way data is stored for analytics. And reach for a table format when the lifecycle of that analytical data genuinely demands one — not because it's the technology attached to the fastest-sounding benchmark number you've seen.
+
+> Although this reference architecture uses Amazon Redshift Spectrum as the analytical consumer, the underlying lesson is broader: analytical engines pay a price when the physical organization of lake data is optimized exclusively for ingestion.
 
 ---
 
