@@ -56,7 +56,7 @@ That combination — a healthy write path and a degrading read path over the *sa
 
 ![From Fast Ingestion to Slow Analytics](https://aniruddhawrites.github.io/assets/img/from-fast-ingestion-to-slow-analytics.png)
 
-> * dashboard queries against recent event data were getting progressively slower
+> dashboard queries against recent event data were getting progressively slower
  
 
 ---
@@ -85,7 +85,7 @@ Small files, on their own, aren't the problem. A single 10 KB file is nothing. T
 
 ![The Small-File Tax](https://aniruddhawrites.github.io/assets/img/The-Small-File-Tax.png)
 
-> * continuous streaming creates small-file bottlenecks
+> continuous streaming creates small-file bottlenecks
 
 It's worth being precise about *why* a large number of small objects is expensive for an analytical engine, because "more files means more requests, therefore slow" is an oversimplification that doesn't hold up to scrutiny and, more importantly, isn't necessary to make the argument. The actual mechanism has several contributing layers:
 
@@ -130,7 +130,7 @@ The fix is not "adopt Iceberg" as a single action. It's the deliberate combinati
 
 ![How Iceberg Tracks the Physical Table](https://aniruddhawrites.github.io/assets/img/How-Iceberg-tracks-the-Physical-Table.png)
 
-> * How Iceberg Tracks the Physical Table 
+> The metadata layer tracks all needed
 
 **Parquet** provides the physical file format — columnar storage, efficient compression, and embedded statistics that a query planner can use.
 
@@ -190,7 +190,7 @@ Compaction is recurring, not one-time, because ingestion doesn't stop. A landing
 
 ![How Compaction Changes the Physical Layout](https://aniruddhawrites.github.io/assets/img/How-Compaction-Changes-the-Physical-Layout.png)
 
-> * Snapshots preserve history for rollbacks
+> Snapshots preserve history for rollbacks
 
 "Run it daily" is not a universal answer, and treating it as one is one of the more common mistakes in production deployments of this pattern. The right cadence depends on the rate of file accumulation, the query workload's freshness requirements, the cost of running the compaction job itself, and how partitions are behaving under load. A workload accumulating files faster than a daily job can absorb needs more frequent, threshold-based triggering — compact when a partition crosses a file-count or fragmentation threshold, not on a fixed calendar regardless of actual need. A workload with a healthy, slowly-growing partition doesn't need the compute cost of a daily rewrite it doesn't yet require. AWS's guidance on Iceberg optimization on AWS specifically frames compaction as an ongoing maintenance operation to be tuned to the workload, not a one-time fix or a fixed-schedule chore. [Apache Iceberg optimization: Solving the small files problem in Amazon EMR, AWS Big Data Blog]
 
@@ -240,6 +240,7 @@ AWS Glue / Spark compaction (threshold-based)
 Fewer, larger Parquet files, committed as new snapshots
      ↓
 Amazon Redshift Spectrum
+
 ```
 
 | Aspect | Before | After |
@@ -258,7 +259,7 @@ Ingestion behavior is unchanged in this picture — that's deliberate. The appli
 
 ![Same Data. Different Physical Layout.](https://aniruddhawrites.github.io/assets/img/Same-Data-Different-Physical-Layout.png)
 
-> * Ingestion remains unchanged; optimization happens downstream
+> Ingestion remains unchanged; optimization happens downstream
 
 ---
 
@@ -377,17 +378,17 @@ Design the way data arrives for ingestion. Design the way data is stored for ana
 
 ## Sources
 
-- Amazon Redshift Spectrum query performance — AWS Documentation: https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-external-performance.html
-- Data files for queries in Amazon Redshift Spectrum — AWS Documentation: https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-data-files.html
-- Using Apache Iceberg tables with Amazon Redshift — AWS Documentation: https://docs.aws.amazon.com/redshift/latest/dg/querying-iceberg.html
-- Accelerate query performance with Apache Iceberg statistics on the AWS Glue Data Catalog — AWS Big Data Blog: https://aws.amazon.com/blogs/big-data/accelerate-query-performance-with-apache-iceberg-statistics-on-the-aws-glue-data-catalog/
-- Introducing AWS Glue Data Catalog automation for table statistics collection — AWS Big Data Blog: https://aws.amazon.com/blogs/big-data/introducing-aws-glue-data-catalog-automation-for-table-statistics-collection-for-improved-query-performance-on-amazon-redshift-and-amazon-athena/
-- Apache Iceberg optimization: Solving the small files problem in Amazon EMR — AWS Big Data Blog: https://aws.amazon.com/blogs/big-data/apache-iceberg-optimization-solving-the-small-files-problem-in-amazon-emr/
-- Optimizing read performance — AWS Prescriptive Guidance for Apache Iceberg on AWS: https://docs.aws.amazon.com/prescriptive-guidance/latest/apache-iceberg-on-aws/best-practices-read.html
-- Using Iceberg workloads in Amazon S3 — AWS Prescriptive Guidance: https://docs.aws.amazon.com/prescriptive-guidance/latest/apache-iceberg-on-aws/best-practices-workloads.html
-- Best practices for using Amazon Redshift Spectrum — AWS Prescriptive Guidance: https://docs.aws.amazon.com/prescriptive-guidance/latest/query-best-practices-redshift/best-practices-redshift-spectrum.html
-- 10 Best Practices for Amazon Redshift Spectrum — AWS Big Data Blog: https://aws.amazon.com/blogs/big-data/10-best-practices-for-amazon-redshift-spectrum/
-- Apache Iceberg Table Specification: https://iceberg.apache.org/spec/
+- [Amazon Redshift Spectrum query performance — AWS Documentation](https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-external-performance.html)
+- [Data files for queries in Amazon Redshift Spectrum — AWS Documentation](https://docs.aws.amazon.com/redshift/latest/dg/c-spectrum-data-files.html)
+- [Using Apache Iceberg tables with Amazon Redshift — AWS Documentation](https://docs.aws.amazon.com/redshift/latest/dg/querying-iceberg.html)
+- [Accelerate query performance with Apache Iceberg statistics on the AWS Glue Data Catalog — AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/accelerate-query-performance-with-apache-iceberg-statistics-on-the-aws-glue-data-catalog/)
+- [Introducing AWS Glue Data Catalog automation for table statistics collection — AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/introducing-aws-glue-data-catalog-automation-for-table-statistics-collection-for-improved-query-performance-on-amazon-redshift-and-amazon-athena/)
+- [Apache Iceberg optimization: Solving the small files problem in Amazon EMR — AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/apache-iceberg-optimization-solving-the-small-files-problem-in-amazon-emr/)
+- [Optimizing read performance — AWS Prescriptive Guidance for Apache Iceberg on AWS](https://docs.aws.amazon.com/prescriptive-guidance/latest/apache-iceberg-on-aws/best-practices-read.html)
+- [Using Iceberg workloads in Amazon S3 — AWS Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/apache-iceberg-on-aws/best-practices-workloads.html)
+- [Best practices for using Amazon Redshift Spectrum — AWS Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/query-best-practices-redshift/best-practices-redshift-spectrum.html)
+- [10 Best Practices for Amazon Redshift Spectrum — AWS Big Data Blog](https://aws.amazon.com/blogs/big-data/10-best-practices-for-amazon-redshift-spectrum/)
+- [Apache Iceberg Table Specification](https://iceberg.apache.org/spec/)
 
 ---
 
