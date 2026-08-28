@@ -241,11 +241,17 @@ Fewer, larger Parquet files, committed as new snapshots
      ↓
 Amazon Redshift Spectrum
 ```
-| Aspect          | Before          | After                |
-| --------------- | --------------- | -------------------- |
-| Compression     | Text-oriented   | Columnar compression |
-| Scan efficiency | Lower           | Higher               |
-| Column access   | Record-oriented | Columnar             |
+
+| Aspect | Before | After |
+|---|---|---|
+| File format | JSON | Parquet |
+| Average file size | ~10 KB (illustrative) | 64 MB–128 MB (illustrative target range) |
+| File count | Very high | Substantially lower |
+| Metadata planning | Directory-level object listing | Iceberg snapshots and manifests |
+| Optimizer statistics | Minimal | Glue-generated Iceberg statistics |
+| Scan efficiency | Low — full-record parsing | Higher — columnar, prunable |
+| Compression | Weak, text-based | Strong, columnar-aware |
+| Data freshness | Immediate | Slightly delayed, dependent on compaction cadence |
 
 Ingestion behavior is unchanged in this picture — that's deliberate. The applications still write the way they were always going to write. What changed is entirely downstream, in how that data is subsequently organized for the workload that consumes it.
 
