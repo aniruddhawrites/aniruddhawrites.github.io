@@ -54,7 +54,7 @@ The presenting symptom was simple: dashboard queries against recent event data w
 
 That combination — a healthy write path and a degrading read path over the *same* data — is the signature of a physical layout problem, not a capacity problem. If the cluster were simply undersized, you'd expect both ingestion and query performance to degrade together as volume grew, or you'd expect the problem to be fixable by scaling compute. Here, scaling compute produced only marginal improvement, which is itself a diagnostic clue worth taking seriously: throwing more compute at a query engine doesn't reduce the number of small objects it has to enumerate, open, and parse before it reaches useful data. It just processes the overhead in parallel, faster, up to a point.
 
-![From Fast Ingestion to Slow Analytics](https://aniruddhawrites.github.io/assets/img/from-fast-ingestion-to-slow-analytics.png align="center")
+![From Fast Ingestion to Slow Analytics](https://aniruddhawrites.github.io/assets/img/from-fast-ingestion-to-slow-analytics.png)
 
 > * dashboard queries against recent event data were getting progressively slower
  
@@ -83,7 +83,7 @@ This separation matters because file-count reduction and query-latency reduction
 
 Small files, on their own, aren't the problem. A single 10 KB file is nothing. The problem is what accumulates when a streaming pipeline optimized for write latency runs continuously against the same landing zone for hours and days without any downstream consolidation step.
 
-![The Small-File Tax](https://aniruddhawrites.github.io/assets/img/The-Small-File-Tax.png align="center")
+![The Small-File Tax](https://aniruddhawrites.github.io/assets/img/The-Small-File-Tax.png)
 
 > * continuous streaming creates small-file bottlenecks
 
