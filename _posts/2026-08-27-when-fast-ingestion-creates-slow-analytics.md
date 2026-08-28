@@ -10,9 +10,10 @@ tags: [Amazon Redshift, Redshift Spectrum, Amazon S3, Apache Iceberg, Parquet, D
 ---
 
 # When Fast Ingestion Creates Slow Analytics
-## Solving the S3 Small-File Problem with Apache Iceberg, Compaction, and Amazon Redshift Spectrum
 
-*A reference architecture case study*
+> Solving the S3 Small-File Problem with Apache Iceberg, Compaction, and Amazon Redshift Spectrum
+>
+> *A reference architecture case study*
 
 ---
 ## Author's note
