@@ -1,6 +1,11 @@
 ---
 layout: post
 title: "When Fast Ingestion Creates Slow Analytics"
+seo_title: "When Fast Ingestion Creates Slow Analytics | Iceberg, S3 & Redshift Spectrum"
+subtitle: "Why can a fast streaming pipeline create slow analytics? Explore the S3 small-file problem and how Parquet, compaction, Apache Iceberg, and Redshift Spectrum improve analytical data layouts."
+cover-img: /assets/img/architecture-diagram.png
+thumbnail-img: /assets/img/architecture-diagram.png
+share-img: /assets/img/architecture-diagram.png
 description: "Why can a fast streaming pipeline create slow analytics? Explore the S3 small-file problem and how Parquet, compaction, Apache Iceberg, and Redshift Spectrum improve analytical data layouts."
 date: 2026-08-27
 categories:
